@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080706">
+  <meta name="description" content="Сила женщины - теоретический курс Академии тонкого плана «Кутюрье Души». Старт в ноябре, 2-3 встречи в месяц. Стоимость курса 9 000 ₽.">
+  <title>Сила женщины | Кутюрье Души</title>
+  <style>
+    :root{color-scheme:dark;--paper:#f2e8d6;--body:#cbc0ae;--muted:#a99d8b;--gold:#ebc886;--black:#080706}
+    *{box-sizing:border-box}
+    html{background:var(--black)}
+    body{margin:0;min-width:320px;background:radial-gradient(ellipse at 50% 10%,#30231765,transparent 46%),radial-gradient(ellipse at 0% 75%,#37240e40,transparent 47%),#080706;color:var(--paper);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;isolation:isolate}
+    a{color:inherit;-webkit-tap-highlight-color:transparent}button,summary{-webkit-tap-highlight-color:transparent}button{font:inherit}
+    .cosmos{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:-1}
+    #dust{position:absolute;inset:0;width:100%;height:100%}
+    .glow{position:absolute;width:80vmax;height:80vmax;left:calc(50% - 40vmax);top:-26vmax;background:radial-gradient(ellipse,#e8b96418,transparent 61%);filter:blur(45px);animation:breathe 17s ease-in-out infinite alternate}
+    .glow.second{top:35vh;left:-50vmax;opacity:.5;animation-delay:-9s}
+    #sigils{position:absolute;inset:0}
+    .sigil{position:absolute;color:#e9c78c;opacity:var(--a,.35);filter:drop-shadow(0 0 5px #f8c76777) drop-shadow(0 0 20px #f4bd4b33);animation:drift var(--t,21s) ease-in-out infinite alternate;animation-delay:var(--d,0s)}
+    .sigil svg{width:100%;height:100%;fill:none;stroke:currentColor;stroke-width:1;stroke-linecap:round;stroke-linejoin:round}
+    .page{max-width:1100px;margin:auto;padding:33px 62px 23px}
+    .brand{display:flex;align-items:center;justify-content:center;gap:13px;text-align:left;font-size:9px;line-height:1.7;letter-spacing:.17em;text-transform:uppercase;color:var(--muted)}
+    .brand svg{width:25px;height:35px;fill:none;stroke:var(--gold);stroke-width:1.05;stroke-linejoin:round}
+    .brand strong{display:block;font-weight:500;font-size:11px;letter-spacing:.24em;color:#e4d9c7}
+    .hero{text-align:center;padding:33px 0 28px}
+    .eyebrow{font-size:10px;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin:0 0 21px}
+    h1{font-size:clamp(62px,9.2vw,112px);line-height:.98;letter-spacing:-.035em;font-weight:300;margin:0;text-transform:uppercase;text-shadow:0 0 27px #f5ce8420}
+    h1 span{display:block}
+    .subtitle{font-size:18px;line-height:1.5;letter-spacing:.005em;max-width:570px;margin:22px auto 0;color:#ead7b5}
+    .intro{max-width:570px;font-size:13px;line-height:1.7;color:var(--body);margin:13px auto 0}
+    .content{display:grid;grid-template-columns:1.08fr 1fr;gap:38px;background:linear-gradient(135deg,#17130dc9,#0c0b09e0);padding:27px 30px;border:1px solid #dfbe7e20;border-radius:18px;box-shadow:0 15px 65px #0005;backdrop-filter:blur(14px)}
+    h2{font-size:10px;line-height:1.4;font-weight:500;color:var(--gold);text-transform:uppercase;letter-spacing:.17em;margin:0 0 18px}
+    .topics{list-style:none;padding:0;margin:0;display:grid;gap:16px}
+    .topics li{display:grid;grid-template-columns:18px 1fr;gap:11px;font-size:13px;line-height:1.6;color:var(--body)}
+    .num{color:#dfbd7e;font-size:9px;line-height:2.3;letter-spacing:.07em}
+    .topic-title{color:var(--paper)}
+    .schedule{display:flex;align-items:flex-start;gap:23px;margin:0 0 11px}
+    .schedule p{margin:0;font-size:17px;line-height:1.4;font-weight:400;letter-spacing:-.02em;color:var(--paper)}
+    .schedule small{display:block;font-size:11px;line-height:1.5;letter-spacing:0;color:var(--muted);margin-top:4px}
+    .date-note{font-size:11px;line-height:1.6;color:var(--muted);margin:0 0 20px;max-width:295px}
+    .bonus-title{font-size:10px;letter-spacing:.12em;color:var(--gold);text-transform:uppercase;margin:0 0 7px}
+    .bonus-copy{font-size:12px;line-height:1.7;color:var(--body);margin:0}
+    .together{margin:17px auto 0;max-width:780px;text-align:center;font-size:12px;line-height:1.7;color:var(--muted)}
+    .together a{color:#e6c890;text-decoration-color:#e6c89060;text-underline-offset:3px}
+    .booking{display:flex;justify-content:center;align-items:center;gap:34px;margin:26px 0 0}
+    .price{margin:0;font-size:35px;line-height:1.1;letter-spacing:-.035em;color:var(--paper);font-weight:350}
+    .price small{display:block;font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+    .cta-wrap{text-align:center}
+    .cta{display:inline-flex;gap:30px;justify-content:center;align-items:center;min-height:49px;border-radius:7px;border:1px solid #e0b76c90;background:#dfbb7720;box-shadow:inset 0 0 22px #f0b95108,0 0 28px #f0b9510e;padding:14px 22px;color:#ffebc6;text-decoration:none;font-size:13px;letter-spacing:.025em;transition:background .25s,box-shadow .25s,border-color .25s}
+    .cta:hover{background:#d9ae5b38;border-color:var(--gold);box-shadow:0 0 36px #e2b2542e}
+    .cta svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.2}
+    .code{font-size:10px;line-height:1.7;color:var(--muted);margin:9px 0 0}.code b{color:#ead2a4;font-weight:500}
+    .split{text-align:center;font-size:11px;line-height:1.6;color:var(--muted);margin:16px 0 0}
+    .split a{text-underline-offset:3px;text-decoration-color:#a99d8b60}
+    .legal{margin-top:29px;text-align:center;font-size:9px;line-height:1.8;color:#918878}
+    .legal p{margin:0}.legal .name{color:#b4a791}.legal-links{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 18px;margin-top:7px}
+    .legal-links a{color:#ab9e88;text-underline-offset:3px;text-decoration-color:#ab9e8845}
+    .legal details{margin-top:6px}.legal summary{cursor:pointer;list-style:none;width:fit-content;margin:auto;text-underline-offset:3px;text-decoration:underline;text-decoration-color:#ab9e8845}
+    .legal summary::-webkit-details-marker{display:none}.legal details[open] summary{margin-bottom:6px}.legal .registry{max-width:570px;margin:0 auto}
+    .motion{position:fixed;bottom:14px;right:14px;display:grid;place-items:center;width:33px;height:33px;border:1px solid #bda77d40;border-radius:50%;background:#0d0b08d9;color:var(--gold);z-index:4;cursor:pointer}
+    .motion svg{width:11px;height:11px;fill:currentColor}.play{display:none}.paused .play{display:block}.paused .pause{display:none}.paused .sigil,.paused .glow{animation-play-state:paused}
+    a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+    @keyframes drift{from{transform:translate3d(0,0,0) rotate(-5deg)}to{transform:translate3d(9px,-22px,0) rotate(6deg)}}
+    @keyframes breathe{from{opacity:.4;transform:scale(.8)}to{opacity:1;transform:scale(1.12)}}
+    @media(max-width:800px){.page{max-width:560px;padding:25px 23px 30px}.brand{font-size:8px;gap:10px}.brand strong{font-size:10px}.brand svg{width:23px;height:33px}.hero{padding:33px 0 25px}.eyebrow{font-size:9px;letter-spacing:.09em;margin-bottom:20px}h1{font-size:clamp(59px,14vw,80px)}.subtitle{font-size:17px;max-width:330px;margin-top:20px}.intro{font-size:13px;line-height:1.65;margin-top:12px;max-width:345px}.content{grid-template-columns:1fr;gap:27px;padding:24px;border-radius:15px}.topics{gap:13px}.topics li{font-size:13px}.schedule{gap:26px}.schedule p{font-size:17px}.date-note{margin-bottom:18px}.bonus-copy{font-size:12px}.together{margin-top:18px;font-size:12px;text-align:left;padding:0 5px}.booking{flex-direction:column;gap:18px;margin-top:26px}.price{text-align:center;font-size:34px}.price small{margin-bottom:7px}.cta{min-height:50px;padding:14px 22px;gap:35px}.code{font-size:11px}.split{font-size:11px;max-width:280px;margin:15px auto 0}.legal{margin-top:29px;font-size:9px}.legal-links{gap:5px 13px}.sigil{opacity:calc(var(--a,.35)*.75)}}
+    @media(prefers-reduced-motion:reduce){.sigil,.glow{animation:none}.cta{transition:none}}
+  </style>
+</head>
+<body>
+  <div class="cosmos" aria-hidden="true"><div class="glow"></div><div class="glow second"></div><canvas id="dust"></canvas><div id="sigils"></div></div>
+  <main class="page">
+    <header class="brand"><svg viewBox="0 0 40 56" aria-hidden="true"><circle cx="20" cy="23" r="10"/><path d="M8 3C0 24 5 39 20 44 35 39 40 24 32 3 35 24 30 37 20 41 10 37 5 24 8 3ZM20 44v10m-6-5h12"/></svg><div>Академия тонкого плана<strong>Кутюрье Души</strong></div></header>
+    <section class="hero" aria-labelledby="title">
+      <p class="eyebrow">Теоретический курс / старт в ноябре</p>
+      <h1 id="title"><span>Сила</span><span>женщины</span></h1>
+      <p class="subtitle">Выход к своей силе, свободе<br>и потенциалу Души</p>
+      <p class="intro">Серия лекций о женской архитектуре и перепрошивке ментального тела для гармоничного построения системы женщины.</p>
+    </section>
+    <div class="content">
+      <section aria-labelledby="topics-title">
+        <h2 id="topics-title">Что исследуем</h2>
+        <ol class="topics">
+          <li><span class="num" aria-hidden="true">01</span><span><span class="topic-title">Женская архитектура.</span> Система женщины в рамках нижних и верхних систем.</span></li>
+          <li><span class="num" aria-hidden="true">02</span><span><span class="topic-title">Реализация и финансы</span> через собственную силу.</span></li>
+          <li><span class="num" aria-hidden="true">03</span><span><span class="topic-title">Роли, маски и подключения,</span> которые стягивают энергию женщины. Выход в свободу.</span></li>
+        </ol>
+      </section>
+      <section aria-labelledby="format-title">
+        <h2 id="format-title">Как проходит курс</h2>
+        <div class="schedule"><p>Ноябрь - декабрь<small>Возможно продолжение в январе</small></p><p>2-3<small>встречи в месяц</small></p></div>
+        <p class="date-note">Точная дата старта будет объявлена в чате курса.</p>
+        <p class="bonus-title">Бонусные практики включены</p>
+        <p class="bonus-copy">Практики будут добавляться по мере актуальности процессов и потребностей группы.</p>
+      </section>
+    </div>
+    <p class="together">Сейчас в Академии особенно актуально сочетать этот курс с практикумом <a href="https://couturiersoul.ru/mother" target="_blank" rel="noopener noreferrer">Великая Мать</a> и другими метафизическими практиками, чтобы информация встраивалась в систему и практическим путём.</p>
+    <div class="booking">
+      <p class="price"><small>Стоимость курса</small>9 000 ₽</p>
+      <div class="cta-wrap"><a class="cta" href="https://t.me/couturiermanager" target="_blank" rel="noopener noreferrer">Забронировать место<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 16 16 4M4 4h12v12"/></svg></a><p class="code">Пишите кодовое слово <b>ЖЕНЩИНА</b> для брони места</p></div>
+    </div>
+    <p class="split">Для постоянных учеников есть <a href="https://t.me/couturiermanager" target="_blank" rel="noopener noreferrer">разделение платежей</a>.</p>
+    <footer class="legal">
+      <p class="name">ИП Погудина Ксения Андреевна</p>
+      <p>ИНН 434567891814 · ОГРНИП 324430000030176</p>
+      <div class="legal-links"><a href="https://pogudinaksenia.ru/offer" target="_blank" rel="noopener noreferrer">Договор оферты</a><a href="https://couturiersoul.ru/policy" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a><a href="mailto:kisucha1995@mail.ru">kisucha1995@mail.ru</a></div>
+      <details><summary>Сведения о регистрации</summary><p class="registry">ОГРНИП 324430000030176 от 13.06.2024.<br>Регистрирующий орган - Управление Федеральной налоговой службы по Кировской области.<br>Адрес регистрации по оферте - 610000, Кировская область, г. Киров.</p></details>
+    </footer>
+  </main>
+  <button class="motion" type="button" aria-label="Приостановить анимацию" aria-pressed="false" title="Приостановить анимацию"><svg class="pause" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1h2.5v10H2zm5.5 0H10v10H7.5z"/></svg><svg class="play" viewBox="0 0 12 12" aria-hidden="true"><path d="m3 1 8 5-8 5z"/></svg></button>
+  <script>
+    (()=>{
+      'use strict';
+      const paths=[
+        'M32 7C8 8 10 31 31 31S53 57 31 60M32 7v12m0 30v12M15 35l-5 7 5 7m34-14 5 7-5 7',
+        'M31 7 18 23l13 14 13-14ZM31 37v20m-12-9 12 9 12-9M8 28c1 22 47 22 48 0',
+        'M16 9c-10 21-3 45 16 47 19-2 26-26 16-47M32 20c-15 0-15 23 0 23s15-23 0-23ZM32 43v19',
+        'M10 17c28-17 17 35 43 19M14 30c26-13 10 32 36 22M31 5v12m0 32v13',
+        'M31 4v15m-9-7 9 7 9-7M12 28q19 31 38 0M19 38q12 33 24 0M31 39v23',
+        'M31 9c-25 12-25 40 0 48 25-8 25-36 0-48ZM31 20v25m-7-15 7-10 7 10M14 59l17-6 17 6',
+        'M15 7c30 0-2 52 32 52M15 23h23M22 42h24M45 4v12m-6-6h12',
+        'M16 11q16 25 32 0M9 27q23 28 46 0M32 23v39m-8-8 8 8 8-8M29 8h6',
+        'M43 9C8 3 5 47 34 53 53 57 57 25 38 23 21 21 20 42 34 41M32 53v10',
+        'M31 7 18 26l13 17 13-17ZM31 43v18M10 29l-4 8 4 8m43-16 4 8-4 8M26 26h10',
+        'M12 10q38-7 23 22T18 56M11 26q24-7 37 9M32 4v12m13 33 6 7-10 4',
+        'M31 4v14M15 20c-21 23 8 37 16 14 8 23 37 9 16-14M31 34v26m-9-7 9 7 9-7',
+        'M18 6c25 20-18 29 6 48M46 6C21 26 64 35 40 54M24 54l8 8 8-8M27 30h10',
+        'M31 7c-21 14-21 28 0 39 21-11 21-25 0-39ZM31 46v15M8 19l8 6-8 6m46-12-8 6 8 6',
+        'M12 14c0 19 40 19 40 0M19 27q13 30 26 0M32 38v23m-9-7 9 7 9-7M27 8h10',
+        'M31 5c-27 18-27 35 0 48 27-13 27-30 0-48ZM31 16c-11 9-11 17 0 23 11-6 11-14 0-23ZM31 53v10'
+      ];
+      const coords=[[5,6,65,.43],[20,1,43,.27],[81,4,58,.36],[93,18,72,.48],[2,34,82,.46],[87,36,48,.36],[7,64,65,.43],[95,72,59,.43],[17,86,51,.25],[79,88,60,.33],[40,1,37,.24],[64,7,32,.25],[0,89,61,.4],[91,53,77,.36],[24,54,39,.12],[73,66,43,.13],[39,82,37,.16],[58,92,39,.23],[68,29,43,.15],[29,22,43,.16],[12,42,45,.21],[83,19,39,.24],[49,64,37,.13],[55,24,31,.13]];
+      const field=document.getElementById('sigils');
+      for(let i=0;i<coords.length;i++){
+        const [x,y,size,alpha]=coords[i],el=document.createElement('div');el.className='sigil';
+        el.style.cssText=`left:calc(${x}% - ${size/2}px);top:${y}%;width:${size}px;height:${size*1.2}px;--a:${alpha};--t:${18+i%7*2}s;--d:-${i*1.9}s`;
+        const svg=document.createElementNS('http://www.w3.org/2000/svg','svg');svg.setAttribute('viewBox','0 0 64 70');
+        const path=document.createElementNS('http://www.w3.org/2000/svg','path');path.setAttribute('d',paths[i%paths.length]);svg.append(path);el.append(svg);field.append(el);
+      }
+      const canvas=document.getElementById('dust'),ctx=canvas.getContext('2d'),button=document.querySelector('.motion'),query=matchMedia('(prefers-reduced-motion: reduce)');
+      let paused=query.matches,width=0,height=0,particles=[],raf=0,last=0,seed=12371;
+      const random=()=>{seed=(seed*16807)%2147483647;return(seed-1)/2147483646;};
+      function resize(){
+        width=innerWidth;height=innerHeight;const dpr=Math.min(devicePixelRatio||1,2);canvas.width=width*dpr;canvas.height=height*dpr;
+        if(!ctx)return;ctx.setTransform(dpr,0,0,dpr,0,0);seed=12371;
+        particles=Array.from({length:Math.min(260,Math.floor(width*height/4000)+70)},()=>({x:random()*width,y:random()*height,r:random()*1+.3,alpha:random()*.5+.1,v:random()*9+3,phase:random()*Math.PI*2}));draw(0);
+      }
+      function draw(dt){
+        if(!ctx)return;ctx.clearRect(0,0,width,height);
+        for(const p of particles){p.y-=p.v*dt;p.x+=Math.sin(p.phase)*dt*3;p.phase+=dt*.5;if(p.y<-5){p.y=height+4;p.x=random()*width;}
+          const central=Math.abs(p.x/width-.5)<.32,alpha=p.alpha*(.65+Math.sin(p.phase)*.3)*(central?.35:1);
+          ctx.fillStyle=`rgba(241,202,126,${alpha})`;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();
+          if(p.r>1.03){const glow=ctx.createRadialGradient(p.x,p.y,0,p.x,p.y,7);glow.addColorStop(0,`rgba(247,199,104,${alpha*.27})`);glow.addColorStop(1,'rgba(247,199,104,0)');ctx.fillStyle=glow;ctx.fillRect(p.x-7,p.y-7,14,14);}
+        }
+      }
+      function frame(t){if(paused||document.hidden){raf=0;return;}const dt=last?Math.min((t-last)/1000,.05):0;last=t;draw(dt);raf=requestAnimationFrame(frame);}
+      function sync(){document.body.classList.toggle('paused',paused);button.setAttribute('aria-pressed',String(paused));const label=paused?'Включить анимацию':'Приостановить анимацию';button.setAttribute('aria-label',label);button.title=label;if(raf)cancelAnimationFrame(raf);raf=0;last=0;if(!paused&&!document.hidden)raf=requestAnimationFrame(frame);}
+      button.addEventListener('click',()=>{paused=!paused;sync();});query.addEventListener('change',e=>{paused=e.matches;sync();});document.addEventListener('visibilitychange',sync);addEventListener('resize',resize,{passive:true});resize();sync();
+    })();
+  </script>
+</body>
+</html>
