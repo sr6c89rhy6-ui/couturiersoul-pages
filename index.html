@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b23">
+  <meta name="description" content="Ближайшие события Академии тонкого плана «Кутюрье Души». Напитка Муладхары в записи, практикум «Великая Мать», активация многомерных крыльев и курс «Сила женщины».">
+  <title>Ближайшие события | Кутюрье Души</title>
+  <style>
+    :root{color-scheme:dark;--ink:#f2eff8;--soft:#c8c7e3;--quiet:#aaacca;--gold:#e4d1ac;--purple:#a8a7ee;--bg:#080b23}
+    *{box-sizing:border-box}
+    html{background:var(--bg);scroll-behavior:smooth}
+    body{margin:0;min-width:320px;isolation:isolate;color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased;background:radial-gradient(ellipse at 45% 0%,#252650 0,transparent 60%),radial-gradient(ellipse at 0% 70%,#171b48 0,transparent 50%),radial-gradient(ellipse at 100% 80%,#222053 0,transparent 50%),#080b23}
+    button,a{-webkit-tap-highlight-color:transparent}
+    a{color:inherit}button{font:inherit}
+    .cosmos,.dust-veil{position:fixed;inset:0;overflow:hidden;pointer-events:none}
+    .cosmos{z-index:-2}.dust-veil{z-index:3}
+    #stardust,#fairydust{position:absolute;inset:0;width:100%;height:100%}
+    .haze{position:absolute;width:90vmax;height:80vmax;left:-20%;top:-35%;border-radius:50%;background:radial-gradient(ellipse,rgba(89,90,208,.22),rgba(72,42,154,.1) 35%,transparent 67%);filter:blur(38px);animation:nebula 18s ease-in-out infinite alternate}
+    .haze.second{left:32%;top:10%;width:75vmax;height:75vmax;background:radial-gradient(ellipse,rgba(70,76,187,.17),rgba(107,83,191,.1) 38%,transparent 66%);animation-duration:23s;animation-delay:-11s}
+    .symbol-library{position:absolute;width:0;height:0;overflow:hidden}
+    .page{position:relative;z-index:1;max-width:1350px;min-height:100svh;margin:0 auto;padding:30px 65px;display:flex;flex-direction:column;justify-content:center;overflow:clip}
+    .masthead{position:relative;text-align:center;margin-bottom:30px}
+    .brand-mark{display:block;width:46px;height:58px;margin:0 auto 10px;color:var(--gold);opacity:.8;animation:crown-sway 8s ease-in-out infinite}
+    .brand-type{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--soft);margin:0 0 8px}
+    .brand-name{font-size:15px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;margin:0}
+    .heading{margin-top:24px}h1{font-size:clamp(30px,3.35vw,48px);font-weight:350;line-height:1.15;letter-spacing:.055em;text-transform:uppercase;margin:0}
+    .season{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--quiet);margin:12px 0 0}
+    .events-wrap{position:relative;isolation:isolate}
+    .sigil-field{position:absolute;inset:0 -48px -25px;z-index:-1;overflow:hidden;pointer-events:none;color:var(--gold)}
+    .ambient-symbol{position:absolute;opacity:.22;transform:translate3d(var(--px,0px),var(--py,0px),0);transition:transform 1.3s ease-out}
+    .ambient-symbol svg{display:block;width:100%;height:100%;overflow:visible;animation:sigil-drift 13s ease-in-out infinite}
+    .ambient-wings{width:240px;height:180px;left:0;top:1%}
+    .ambient-ankh{width:100px;height:160px;right:0;top:6%;rotate:12deg}
+    .ambient-book{width:215px;height:180px;left:39%;bottom:-12%;rotate:-8deg}
+    .ambient-moon{width:108px;height:132px;right:23%;bottom:0;rotate:-15deg}
+    .galactic{color:#bbbdf6;opacity:.26}
+    .glyph-one{width:64px;height:92px;left:29%;top:16%;rotate:9deg}
+    .glyph-two{width:72px;height:98px;right:29%;top:27%;rotate:-7deg}
+    .glyph-three{width:60px;height:87px;left:14%;bottom:-3%;rotate:-10deg}
+    .glyph-four{width:57px;height:86px;right:7%;bottom:-5%;rotate:8deg}
+    .ambient-symbol:nth-child(2n) svg{animation-delay:-5s;animation-duration:17s}.ambient-symbol:nth-child(3n) svg{animation-delay:-9s}
+    .events{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+    .event{position:relative;min-width:0;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:10px;padding:22px;border:1px solid rgba(166,170,239,.28);border-radius:17px;background:linear-gradient(145deg,rgba(41,44,85,.85),rgba(15,19,46,.93));box-shadow:inset 0 1px 0 #d8d7ff10,0 12px 40px #02041535;backdrop-filter:blur(6px);transition:border-color .35s,box-shadow .35s,translate .35s;animation:arrive .9s both}
+    .event:nth-child(2){animation-delay:.12s}.event:nth-child(3){animation-delay:.24s}.event:nth-child(4){animation-delay:.36s}
+    .event:hover,.event:focus-within{border-color:#c6bcf277;box-shadow:inset 0 1px 0 #d8d7ff18,0 18px 70px #6264d729;translate:0 -3px}
+    .date{grid-column:1/-1;display:flex;align-items:center;gap:9px;color:var(--gold);font-size:12px;font-weight:500;letter-spacing:.04em;margin:0 0 13px;min-height:18px}
+    .date .dot{width:3px;height:3px;background:var(--gold);border-radius:50%;opacity:.75}
+    .event-type{grid-column:1/-1;font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:var(--quiet);margin:0 0 6px}
+    h2{grid-column:1/-1;font-size:25px;line-height:1.18;letter-spacing:.015em;font-weight:450;text-transform:uppercase;margin:0 0 9px}
+    .description-toggle{grid-column:1;grid-row:4;display:inline-flex;align-items:center;justify-content:flex-start;gap:6px;width:fit-content;max-width:100%;min-height:44px;padding:4px 0;border:0;background:transparent;color:#e0dcf5;cursor:pointer;text-align:left;font-size:17px;line-height:1.3;letter-spacing:0;white-space:nowrap}
+    .description-toggle svg{width:23px;height:23px;flex:none;stroke:var(--gold);stroke-width:1.7;transition:transform .4s}.description-toggle:hover{color:var(--ink)}
+    .description-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
+    .description-panel{grid-column:1/-1;grid-row:5;display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .5s cubic-bezier(.2,.7,.2,1),opacity .35s}
+    .description-panel.is-open{grid-template-rows:1fr;opacity:1}.description-inner{overflow:hidden;min-height:0}
+    .text{padding-top:12px;font-size:13px;line-height:1.7;color:var(--soft)}.text p{margin:0 0 14px}.text p:last-child{margin-bottom:0}
+    .layers{list-style:none;margin:15px 0 16px;padding:0;display:grid;gap:11px}.layers li{display:grid;grid-template-columns:18px 1fr;gap:7px}.layer-number{font-size:10px;color:var(--gold);padding-top:3px;letter-spacing:.03em}.layers strong{font-weight:500;color:var(--ink)}
+    .note{color:var(--quiet);font-size:12px;line-height:1.65}.bonus{margin-top:16px!important;color:var(--soft);font-size:12px}.bonus-label{display:block;color:var(--gold);font-size:9px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:5px}
+    .action{grid-column:2;grid-row:4;display:flex;align-items:center;justify-content:flex-end}
+    .details{display:inline-flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;color:var(--ink);border:1px solid #d6c9e150;border-radius:7px;padding:7px 10px;font-size:12px;letter-spacing:0;transition:background .25s,border-color .25s,box-shadow .25s;min-height:40px;white-space:nowrap}
+    .details svg{width:13px;height:13px;transition:transform .25s}.details:hover{background:#aaa7f019;border-color:var(--gold);box-shadow:0 0 22px #aaa7f01c}.details:hover svg{transform:translate(2px,-2px)}
+    a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
+    .payment{display:flex;align-items:center;justify-content:center;gap:12px 22px;margin-top:27px;text-align:left}.payment-icon{flex-shrink:0;width:22px;height:22px;fill:none;stroke:var(--gold);stroke-width:1}
+    .payment p{font-size:14px;line-height:1.65;color:#c4c4df;margin:0}.payment p span{display:block}.admin-link{color:var(--gold);text-underline-offset:4px;text-decoration-color:#dac5a766;white-space:nowrap;font-size:13px;padding:10px 0}.admin-link:hover{text-decoration-color:var(--gold)}
+    .motion-toggle{position:fixed;right:17px;bottom:17px;width:36px;height:36px;border:1px solid #c7c1ef55;border-radius:50%;background:#151a3acc;color:var(--gold);display:grid;place-items:center;cursor:pointer;z-index:5;backdrop-filter:blur(8px)}.motion-toggle:hover{background:#303560}.motion-toggle svg{width:11px;height:11px;fill:currentColor}.play-icon{display:none}.is-paused .pause-icon{display:none}.is-paused .play-icon{display:block}
+    .is-paused *,.is-paused *::before,.is-paused *::after{animation-play-state:paused!important}
+    @keyframes sigil-drift{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}
+    @keyframes crown-sway{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+    @keyframes nebula{0%{transform:translate(-3%,3%) rotate(-12deg) scale(.9);opacity:.6}100%{transform:translate(14%,-6%) rotate(12deg) scale(1.15);opacity:1}}
+    @keyframes arrive{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+    @media(min-width:1500px){.page{max-width:1440px;padding:36px 82px}.event{padding:24px}.text{font-size:14px}.note,.bonus{font-size:13px}}
+    @media(max-width:1250px) and (min-width:901px){.page{padding:30px 35px}.events{gap:14px}.event{padding:19px}h2{font-size:24px}.date{font-size:11px}.description-toggle{grid-column:1/-1}.action{grid-column:1/-1;grid-row:5;justify-content:flex-start;margin-top:4px}.description-panel{grid-row:6}.payment{gap:12px}.payment p{font-size:13px}.admin-link{font-size:12px}}
+    @media(max-width:900px){.page{padding:23px 18px 36px;max-width:550px;justify-content:flex-start}.masthead{margin-bottom:22px}.brand-mark{width:40px;height:50px;margin-bottom:8px}.brand-type{font-size:9px;letter-spacing:.2em;margin-bottom:7px}.brand-name{font-size:13px;letter-spacing:.2em}.heading{margin-top:22px}h1{font-size:30px;letter-spacing:.025em;max-width:420px;margin:auto}.season{margin-top:10px;font-size:9px}.events{grid-template-columns:1fr;gap:12px}.event{padding:17px 18px;border-radius:15px;column-gap:8px}.date{margin-bottom:11px;font-size:12px}.event-type{font-size:9px;margin-bottom:5px}h2{font-size:25px;margin-bottom:7px}.text{font-size:14px;line-height:1.7}.note,.bonus{font-size:13px}.description-toggle{font-size:17px}.details{font-size:12px;padding:7px 9px;min-height:40px}.payment{flex-wrap:wrap;column-gap:12px;row-gap:0;margin:23px 5px 0;justify-content:flex-start;align-items:flex-start}.payment-icon{width:20px;height:20px;margin-top:4px}.payment p{font-size:14px;flex:1}.admin-link{margin-left:32px;font-size:13px}.motion-toggle{right:10px;bottom:10px;width:34px;height:34px}.sigil-field{inset:0 -18px -20px}.ambient-wings{left:-60px;top:2%;width:200px;height:160px}.ambient-ankh{right:-34px;top:26%;width:110px;height:170px}.ambient-moon{left:-28px;right:auto;top:56%;bottom:auto;width:100px;height:123px}.ambient-book{left:auto;right:-42px;bottom:2%;width:182px;height:156px}.glyph-one{left:44%;top:20%;width:54px;height:80px}.glyph-two{right:auto;left:8%;top:41%;width:65px;height:90px}.glyph-three{left:auto;right:10%;bottom:31%;width:55px;height:80px}.glyph-four{right:auto;left:33%;bottom:4%;width:48px;height:75px}}
+    @media(max-width:380px){.page{padding-left:16px;padding-right:16px}.event{padding:15px 16px}h1{font-size:27px}h2{font-size:24px}.brand-type{font-size:8px}.brand-name{font-size:12px}.date{font-size:11px}.description-toggle{grid-column:1/-1}.action{grid-column:1/-1;grid-row:5;justify-content:flex-start;margin-top:3px}.description-panel{grid-row:6}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.event,.details,.details svg,.description-panel,.description-toggle svg,.ambient-symbol{transition:none}.event,.brand-mark,.ambient-symbol svg,.haze{animation:none}}
+  </style>
+</head>
+<body>
+
+  <svg class="symbol-library" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <symbol id="isis-crown" viewBox="0 0 120 150">
+        <g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M60 126C27 124 13 103 13 77c0-26-1-52-9-72 16 19 21 47 19 70-2 27 13 39 37 43 24-4 39-16 37-43-2-23 3-51 19-70-8 20-9 46-9 72 0 26-14 47-47 49Z"/>
+          <circle cx="60" cy="70" r="33"/>
+          <path d="M56 126v11h8v-11m-8 11-13 5h34l-13-5"/>
+        </g>
+      </symbol>
+      <symbol id="ankh" viewBox="0 0 90 140">
+        <g fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M45 70C13 55 15 10 45 10s32 45 0 60Zm0 0v61M18 86h54"/>
+          <path d="M41 78H18v12h21v41h12V90h21V78H49"/>
+        </g>
+      </symbol>
+      <symbol id="magic-book" viewBox="0 0 140 118">
+        <g fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 28q30-8 58 10 28-18 58-10l-2 64q-29-8-56 10-27-18-56-10Zm58 10v64M8 34 6 98q34-5 64 11 30-16 64-11l-2-64M19 37q24-3 43 10m19 0q19-13 38-10"/>
+          <path d="M36 51q10 7 0 16-10-9 0-16Zm0 16v11m-6-5h12M87 55l23-4M87 65l18-3M87 75l22-3"/>
+        </g>
+      </symbol>
+      <symbol id="angel-wings" viewBox="0 0 160 120">
+        <g fill="none" stroke="currentColor" stroke-width=".9" stroke-linecap="round" stroke-linejoin="round">
+          <path id="one-wing" d="M78 104C40 102 17 64 8 10c12 24 24 29 39 37 22 11 30 31 31 57ZM73 97C48 79 30 54 18 28M68 101C43 90 28 69 20 49M62 104C43 101 30 89 25 78M72 88C64 65 43 56 29 42"/>
+          <use href="#one-wing" transform="translate(160 0) scale(-1 1)"/>
+          <path d="m80 91 3 6-3 11-3-11Z"/>
+        </g>
+      </symbol>
+      <symbol id="moon" viewBox="0 0 100 125">
+        <path d="M79 12C37 16 21 73 65 102 31 106 7 81 10 52 13 25 43 4 79 12Z" fill="none" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="galactic-one" viewBox="0 0 70 100">
+        <g fill="none" stroke="currentColor" stroke-width=".9" stroke-linecap="round" stroke-linejoin="round"><path d="M35 7v22m-10-9 10 9 10-9M35 29c-25 2-25 35 0 37 25-2 25-35 0-37Zm-8 19 8 8 8-8M35 66v22m-12-9 12 9 12-9M14 37l-5 10 5 10m42-20 5 10-5 10"/><circle cx="35" cy="94" r="1.5"/></g>
+      </symbol>
+      <symbol id="galactic-two" viewBox="0 0 75 105">
+        <g fill="none" stroke="currentColor" stroke-width=".9" stroke-linecap="round" stroke-linejoin="round"><path d="M38 8 22 25l16 17 16-17Zm0 34v16m-23-9c4 23 15 30 23 30s19-7 23-30M27 61l11 18 11-18M38 79v19m-10-6 10 6 10-6"/><circle cx="38" cy="25" r="3"/><path d="M8 35v8m60-8v8"/></g>
+      </symbol>
+      <symbol id="galactic-three" viewBox="0 0 70 100">
+        <g fill="none" stroke="currentColor" stroke-width=".9" stroke-linecap="round" stroke-linejoin="round"><path d="M35 8v15m-8-8 8 8 8-8M18 37c-14 18 8 36 17 18 9 18 31 0 17-18M35 23v52m-12-9 12 9 12-9M24 86h22m-11-5v13"/><circle cx="35" cy="37" r="4"/></g>
+      </symbol>
+      <symbol id="galactic-four" viewBox="0 0 70 100">
+        <g fill="none" stroke="currentColor" stroke-width=".9" stroke-linecap="round" stroke-linejoin="round"><path d="M35 9 22 26l13 17 13-17ZM10 43q25 31 50 0M18 51q17 37 34 0M35 43v45m-12-9 12 9 12-9"/><circle cx="35" cy="26" r="2"/><circle cx="35" cy="95" r="1"/></g>
+      </symbol>
+    </defs>
+  </svg>
+  <div class="cosmos" aria-hidden="true"><div class="haze"></div><div class="haze second"></div><canvas id="stardust"></canvas></div>
+  <div class="dust-veil" aria-hidden="true"><canvas id="fairydust"></canvas></div>
+  <main class="page">
+    <header class="masthead">
+      <svg class="brand-mark" viewBox="0 0 120 150" aria-hidden="true"><use href="#isis-crown"/></svg>
+      <p class="brand-type">Академия тонкого плана</p>
+      <p class="brand-name">Кутюрье Души</p>
+      <div class="heading">
+        <h1>Ближайшие события</h1>
+        <p class="season">Октябрь / ноябрь 2026</p>
+      </div>
+    </header>
+    <div class="events-wrap">
+      <div class="sigil-field" aria-hidden="true">
+        <div class="ambient-symbol ambient-wings"><svg viewBox="0 0 160 120"><use href="#angel-wings"/></svg></div>
+        <div class="ambient-symbol ambient-ankh"><svg viewBox="0 0 90 140"><use href="#ankh"/></svg></div>
+        <div class="ambient-symbol ambient-book"><svg viewBox="0 0 140 118"><use href="#magic-book"/></svg></div>
+        <div class="ambient-symbol ambient-moon"><svg viewBox="0 0 100 125"><use href="#moon"/></svg></div>
+        <div class="ambient-symbol galactic glyph-one"><svg viewBox="0 0 70 100"><use href="#galactic-one"/></svg></div>
+        <div class="ambient-symbol galactic glyph-two"><svg viewBox="0 0 75 105"><use href="#galactic-two"/></svg></div>
+        <div class="ambient-symbol galactic glyph-three"><svg viewBox="0 0 70 100"><use href="#galactic-three"/></svg></div>
+        <div class="ambient-symbol galactic glyph-four"><svg viewBox="0 0 70 100"><use href="#galactic-four"/></svg></div>
+      </div>
+    <div class="events" aria-label="Афиша Академии">
+      <article class="event">
+        <p class="date"><span>В записи</span></p>
+        <p class="event-type">Аудиопрактика</p>
+        <h2>Напитка<br>Муладхары</h2>
+        <button class="description-toggle" type="button" aria-expanded="false" aria-controls="description-1"><span>Открыть описание</span><svg viewBox="0 0 20 20" fill="none" stroke-width="1.3" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg></button>
+        <div class="description-panel" id="description-1" aria-hidden="true" inert><div class="description-inner"><div class="text">
+          <p>Коррекция, усиление и напитка первого основного центра для запуска дальнейшей работы всей системы.</p>
+          <p>Первый центр - главный фундамент для проживания жизни в целостности и развития в любой магической работе.</p>
+          <p class="note">Аудиопрактика с нужными частотами.</p>
+        </div>
+        </div></div>
+        <div class="action"><a class="details" href="https://t.me/couturiersoull/6705" target="_blank" rel="noopener noreferrer" aria-label="Подробнее о практике «Напитка Муладхары»">Подробнее<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a></div>
+      </article>
+      <article class="event">
+        <p class="date"><span>Старт <time datetime="2026-10-26">26 октября</time></span></p>
+        <p class="event-type">Практикум</p>
+        <h2>Великая<br>Мать</h2>
+        <button class="description-toggle" type="button" aria-expanded="false" aria-controls="description-2"><span>Открыть описание</span><svg viewBox="0 0 20 20" fill="none" stroke-width="1.3" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg></button>
+        <div class="description-panel" id="description-2" aria-hidden="true" inert><div class="description-inner"><div class="text">
+          <p>Поэтапное погружение в сознание Земли через три слоя.</p>
+          <ol class="layers">
+            <li><span class="layer-number" aria-hidden="true">01</span><span><strong>Ядро</strong> - сила и опора.</span></li>
+            <li><span class="layer-number" aria-hidden="true">02</span><span><strong>Земная реинкарнационная память</strong> - информация и проводимость информации и энергии.</span></li>
+            <li><span class="layer-number" aria-hidden="true">03</span><span><strong>Материализация</strong> - воплощение идей в форму.</span></li>
+          </ol>
+          <p>Раскрытие в себе кодов Земли через энергопроцессы, знакомство и ченнелинг-передачу необходимых кодов через проводника.</p>
+          <p class="bonus"><span class="bonus-label">Бонус</span>Практика усиления опоры и практика усиления связи с Землёй.</p>
+        </div>
+        </div></div>
+        <div class="action"><a class="details" href="https://couturiersoul.ru/mother" target="_blank" rel="noopener noreferrer" aria-label="Подробнее о практикуме «Великая Мать»">Подробнее<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a></div>
+      </article>
+      <article class="event">
+        <p class="date"><time datetime="2026-10-31">31 октября</time></p>
+        <p class="event-type">Аудиопрактика</p>
+        <h2>Активация<br>крыльев</h2>
+        <button class="description-toggle" type="button" aria-expanded="false" aria-controls="description-4"><span>Открыть описание</span><svg viewBox="0 0 20 20" fill="none" stroke-width="1.3" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg></button>
+        <div class="description-panel" id="description-4" aria-hidden="true" inert><div class="description-inner"><div class="text">
+          <p>Практика активации многомерных крыльев.</p>
+          <p>Какие конкретно крылья активируются и усилят свой потенциал - это индивидуальный вопрос.</p>
+        </div>
+        </div></div>
+        <div class="action"><a class="details" href="https://t.me/couturiersoull/6784" target="_blank" rel="noopener noreferrer" aria-label="Подробнее об аудиопрактике «Активация крыльев»">Подробнее<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a></div>
+      </article>
+      <article class="event">
+        <p class="date"><span>Старт в ноябре</span></p>
+        <p class="event-type">Теоретический курс</p>
+        <h2>Сила<br>женщины</h2>
+        <button class="description-toggle" type="button" aria-expanded="false" aria-controls="description-3"><span>Открыть описание</span><svg viewBox="0 0 20 20" fill="none" stroke-width="1.3" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg></button>
+        <div class="description-panel" id="description-3" aria-hidden="true" inert><div class="description-inner"><div class="text">
+          <p>Женская сила и право творить собственную жизнь. Выход из навязанных ролей в свободу быть собой, выбирать и созидать.</p>
+          <p>Деньги, реализация женщины в современном мире, раскрытие собственной ценности и уверенности через духовные и оккультно-философские аспекты.</p>
+          <p>Раскрытие новых граней своей силы, собственных желаний и способности воплощать их в жизнь. Свобода выстраивать свою жизнь из внутренней опоры.</p>
+        </div>
+        </div></div>
+        <div class="action"><a class="details" href="https://t.me/couturiersoull/s/1797" target="_blank" rel="noopener noreferrer" aria-label="Подробнее о курсе «Сила женщины»">Подробнее<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a></div>
+      </article>
+    </div>
+    <footer class="payment">
+      <svg class="payment-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 15 9l7 3-7 3-3 7-3-7-7-3 7-3Z"/><circle cx="12" cy="12" r="2"/></svg>
+      <p>Для постоянных учеников и клиентов доступно разделение платежей.<span>По этому вопросу пишите администратору.</span></p>
+      <a class="admin-link" href="https://t.me/couturiermanager" target="_blank" rel="noopener noreferrer">Написать администратору ↗</a>
+    </footer>
+    </div>
+  </main>
+  <button class="motion-toggle" type="button" aria-label="Приостановить анимацию" aria-pressed="false" title="Приостановить анимацию">
+    <svg class="pause-icon" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1h2.5v10H2zm5.5 0H10v10H7.5z"/></svg>
+    <svg class="play-icon" viewBox="0 0 12 12" aria-hidden="true"><path d="m3 1 8 5-8 5z"/></svg>
+  </button>
+  <script>
+    (() => {
+      'use strict';
+      const back = document.getElementById('stardust');
+      const front = document.getElementById('fairydust');
+      const ctx = back.getContext('2d');
+      const dust = front.getContext('2d');
+      const button = document.querySelector('.motion-toggle');
+      const motionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const relics = document.querySelectorAll('.ambient-symbol');
+      let paused = motionQuery.matches;
+      let width = 0, height = 0, stars = [], pollen = [], meteors = [];
+      let raf = 0, lastTime = 0, elapsed = 0, nextMeteor = 3;
+      let seed = 74813;
+      const random = () => {seed = (seed * 16807) % 2147483647; return (seed - 1) / 2147483646;};
+      document.querySelectorAll('.description-toggle').forEach(toggle => {
+        toggle.addEventListener('click', () => {
+          const open = toggle.getAttribute('aria-expanded') !== 'true';
+          const panel = document.getElementById(toggle.getAttribute('aria-controls'));
+          toggle.setAttribute('aria-expanded', String(open));
+          toggle.querySelector('span').textContent = open ? 'Скрыть описание' : 'Открыть описание';
+          panel.classList.toggle('is-open', open);
+          panel.setAttribute('aria-hidden', String(!open));
+          panel.inert = !open;
+        });
+      });
+      function resize() {
+        width = window.innerWidth; height = window.innerHeight;
+        const ratio = Math.min(window.devicePixelRatio || 1, 2);
+        for(const [canvas, context] of [[back,ctx],[front,dust]]) {
+          canvas.width = Math.round(width * ratio);canvas.height = Math.round(height * ratio);
+          if(context) context.setTransform(ratio,0,0,ratio,0,0);
+        }
+        seed = 74813;
+        stars = Array.from({length:Math.min(670, Math.floor(width*height/2200)+170)}, () => ({
+          x:random()*width,y:random()*height,r:random()*1.25+.25,
+          alpha:random()*.6+.2,speed:random()*8+4,phase:random()*Math.PI*2,twinkle:random()*1.2+.5,gold:random()>.77
+        }));
+        pollen = Array.from({length:Math.min(190,Math.floor(width*height/7000)+65)}, () => ({
+          x:random()*width,y:random()*height,r:random()*.85+.35,speed:random()*19+11,phase:random()*Math.PI*2,alpha:random()*.55+.15
+        }));
+        meteors = [];draw(0);
+      }
+      function draw(delta) {
+        if(ctx) {
+          ctx.clearRect(0,0,width,height);
+          for(const star of stars) {
+            star.y -= star.speed*delta;star.x += Math.sin(star.phase)*delta*2;
+            star.phase += delta*star.twinkle;
+            if(star.y < -5){star.y=height+4;star.x=random()*width;}
+            const alpha = star.alpha*(.62+Math.sin(star.phase)*.38);
+            ctx.fillStyle=star.gold ? `rgba(235,214,173,${alpha})` : `rgba(209,215,255,${alpha})`;
+            ctx.beginPath();ctx.arc(star.x,star.y,star.r,0,Math.PI*2);ctx.fill();
+            if(star.r>1.25) {
+              ctx.strokeStyle=`rgba(222,223,255,${alpha*.45})`;ctx.lineWidth=.7;
+              const size=3.3+Math.sin(star.phase)*1.2;
+              ctx.beginPath();ctx.moveTo(star.x-size,star.y);ctx.lineTo(star.x+size,star.y);ctx.moveTo(star.x,star.y-size);ctx.lineTo(star.x,star.y+size);ctx.stroke();
+            }
+          }
+          if(delta && elapsed > nextMeteor) {
+            meteors.push({x:random()*width*.85,y:random()*height*.38,life:0});
+            nextMeteor=elapsed+4+random()*5;
+          }
+          for(const meteor of meteors) {
+            meteor.life+=delta;meteor.x+=delta*190;meteor.y+=delta*105;
+            const alpha=Math.sin(Math.min(meteor.life/1.5,1)*Math.PI)*.6;
+            const glow=ctx.createLinearGradient(meteor.x-70,meteor.y-39,meteor.x,meteor.y);
+            glow.addColorStop(0,'rgba(173,182,255,0)');glow.addColorStop(1,`rgba(224,222,255,${alpha})`);
+            ctx.strokeStyle=glow;ctx.lineWidth=1.1;ctx.beginPath();ctx.moveTo(meteor.x-70,meteor.y-39);ctx.lineTo(meteor.x,meteor.y);ctx.stroke();
+          }
+          meteors=meteors.filter(m=>m.life<1.5);
+        }
+        if(dust) {
+          dust.clearRect(0,0,width,height);
+          for(const mote of pollen) {
+            mote.y-=mote.speed*delta;mote.phase+=delta*.65;
+            mote.x+=Math.sin(mote.phase)*delta*12;
+            if(mote.y < -7){mote.y=height+6;mote.x=random()*width;}
+            if(mote.x < -6)mote.x=width+5;if(mote.x>width+7)mote.x=-5;
+            // Softer over the reading area, brighter around the edges.
+            const edge = Math.abs(mote.x/width-.5)*2;
+            const alpha = mote.alpha*(.45+Math.sin(mote.phase)*.3)*(edge>.76 ? 1 : .24);
+            dust.fillStyle=`rgba(239,218,183,${alpha})`;
+            dust.beginPath();dust.arc(mote.x,mote.y,mote.r,0,Math.PI*2);dust.fill();
+            if(edge>.76 && mote.r>1) {
+              dust.fillStyle=`rgba(215,204,255,${alpha*.1})`;
+              dust.beginPath();dust.arc(mote.x,mote.y,mote.r*5,0,Math.PI*2);dust.fill();
+            }
+          }
+        }
+      }
+      function frame(now) {
+        if(paused || document.hidden){raf=0;return;}
+        const delta=lastTime ? Math.min((now-lastTime)/1000,.05) : 0;
+        lastTime=now;elapsed+=delta;draw(delta);raf=requestAnimationFrame(frame);
+      }
+      function sync() {
+        document.body.classList.toggle('is-paused',paused);
+        button.setAttribute('aria-pressed',String(paused));
+        const label=paused ? 'Включить анимацию' : 'Приостановить анимацию';
+        button.setAttribute('aria-label',label);button.title=label;
+        if(raf)cancelAnimationFrame(raf);
+        raf=0;lastTime=0;
+        if(!paused && !document.hidden)raf=requestAnimationFrame(frame);
+        if(paused)relics.forEach(relic=>{relic.style.setProperty('--px','0px');relic.style.setProperty('--py','0px');});
+      }
+      window.addEventListener('pointermove', event => {
+        if(paused || event.pointerType==='touch')return;
+        const x=(event.clientX/width-.5)*12,y=(event.clientY/height-.5)*10;
+        relics.forEach((relic,i)=>{const depth=i%2 ? -1 : .65;relic.style.setProperty('--px',`${x*depth}px`);relic.style.setProperty('--py',`${y*depth}px`);});
+      },{passive:true});
+      document.documentElement.addEventListener('pointerleave',()=>relics.forEach(relic=>{relic.style.setProperty('--px','0px');relic.style.setProperty('--py','0px');}));
+      button.addEventListener('click',()=>{paused=!paused;sync();});
+      motionQuery.addEventListener('change',event=>{paused=event.matches;sync();});
+      document.addEventListener('visibilitychange',sync);
+      window.addEventListener('resize',resize,{passive:true});
+      resize();sync();
+    })();
+  </script>
+</body>
+</html>
