@@ -3,18 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#080706">
+  <meta name="theme-color" content="#030616">
   <meta name="description" content="Сила женщины - теоретический курс Академии тонкого плана «Кутюрье Души». Старт в ноябре, 2-3 встречи в месяц. Стоимость курса 9 000 ₽.">
   <title>Сила женщины | Кутюрье Души</title>
   <style>
-    :root{color-scheme:dark;--paper:#f2e8d6;--body:#cbc0ae;--muted:#a99d8b;--gold:#ebc886;--black:#080706}
+    :root{color-scheme:dark;--paper:#f0edf7;--body:#c6cce0;--muted:#a2aac6;--gold:#ebc886;--black:#030616}
     *{box-sizing:border-box}
     html{background:var(--black)}
-    body{margin:0;min-width:320px;background:radial-gradient(ellipse at 50% 10%,#30231765,transparent 46%),radial-gradient(ellipse at 0% 75%,#37240e40,transparent 47%),#080706;color:var(--paper);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;isolation:isolate}
+    body{margin:0;min-width:320px;background:radial-gradient(ellipse at 50% 10%,#16296765,transparent 46%),radial-gradient(ellipse at 0% 75%,#0b1b604d,transparent 47%),#030616;color:var(--paper);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;font-weight:400;-webkit-font-smoothing:antialiased;isolation:isolate}
     a{color:inherit;-webkit-tap-highlight-color:transparent}button,summary{-webkit-tap-highlight-color:transparent}button{font:inherit}
     .cosmos{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:-1}
     #dust{position:absolute;inset:0;width:100%;height:100%}
-    .glow{position:absolute;width:80vmax;height:80vmax;left:calc(50% - 40vmax);top:-26vmax;background:radial-gradient(ellipse,#e8b96418,transparent 61%);filter:blur(45px);animation:breathe 17s ease-in-out infinite alternate}
+    .glow{position:absolute;width:80vmax;height:80vmax;left:calc(50% - 40vmax);top:-26vmax;background:radial-gradient(ellipse,#4267ed30,transparent 61%);filter:blur(45px);animation:breathe 17s ease-in-out infinite alternate}
     .glow.second{top:35vh;left:-50vmax;opacity:.5;animation-delay:-9s}
     #sigils{position:absolute;inset:0}
     .sigil{position:absolute;color:#e9c78c;opacity:var(--a,.35);filter:drop-shadow(0 0 5px #f8c76777) drop-shadow(0 0 20px #f4bd4b33);animation:drift var(--t,21s) ease-in-out infinite alternate;animation-delay:var(--d,0s)}
@@ -29,7 +29,7 @@
     h1 span{display:block}
     .subtitle{font-size:18px;line-height:1.5;letter-spacing:.005em;max-width:570px;margin:22px auto 0;color:#ead7b5}
     .intro{max-width:570px;font-size:13px;line-height:1.7;color:var(--body);margin:13px auto 0}
-    .content{display:grid;grid-template-columns:1.08fr 1fr;gap:38px;background:linear-gradient(135deg,#17130dc9,#0c0b09e0);padding:27px 30px;border:1px solid #dfbe7e20;border-radius:18px;box-shadow:0 15px 65px #0005;backdrop-filter:blur(14px)}
+    .content{display:grid;grid-template-columns:1.08fr 1fr;gap:38px;background:linear-gradient(135deg,#0d1639d9,#050a22eb);padding:27px 30px;border:1px solid #dfbe7e20;border-radius:18px;box-shadow:0 15px 65px #0005;backdrop-filter:blur(14px)}
     h2{font-size:10px;line-height:1.4;font-weight:500;color:var(--gold);text-transform:uppercase;letter-spacing:.17em;margin:0 0 18px}
     .topics{list-style:none;padding:0;margin:0;display:grid;gap:16px}
     .topics li{display:grid;grid-template-columns:18px 1fr;gap:11px;font-size:13px;line-height:1.6;color:var(--body)}
@@ -47,18 +47,18 @@
     .price{margin:0;font-size:35px;line-height:1.1;letter-spacing:-.035em;color:var(--paper);font-weight:350}
     .price small{display:block;font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
     .cta-wrap{text-align:center}
-    .cta{display:inline-flex;gap:30px;justify-content:center;align-items:center;min-height:49px;border-radius:7px;border:1px solid #e0b76c90;background:#dfbb7720;box-shadow:inset 0 0 22px #f0b95108,0 0 28px #f0b9510e;padding:14px 22px;color:#ffebc6;text-decoration:none;font-size:13px;letter-spacing:.025em;transition:background .25s,box-shadow .25s,border-color .25s}
-    .cta:hover{background:#d9ae5b38;border-color:var(--gold);box-shadow:0 0 36px #e2b2542e}
+    .cta{display:inline-flex;gap:30px;justify-content:center;align-items:center;min-height:49px;border-radius:7px;border:1px solid #e0b76c90;background:#182d6166;box-shadow:inset 0 0 22px #f0b95108,0 0 28px #f0b9510e;padding:14px 22px;color:#ffebc6;text-decoration:none;font-size:13px;letter-spacing:.025em;transition:background .25s,box-shadow .25s,border-color .25s}
+    .cta:hover{background:#243c7766;border-color:var(--gold);box-shadow:0 0 36px #e2b2542e}
     .cta svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.2}
     .code{font-size:10px;line-height:1.7;color:var(--muted);margin:9px 0 0}.code b{color:#ead2a4;font-weight:500}
     .split{text-align:center;font-size:11px;line-height:1.6;color:var(--muted);margin:16px 0 0}
-    .split a{text-underline-offset:3px;text-decoration-color:#a99d8b60}
-    .legal{margin-top:29px;text-align:center;font-size:9px;line-height:1.8;color:#918878}
-    .legal p{margin:0}.legal .name{color:#b4a791}.legal-links{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 18px;margin-top:7px}
-    .legal-links a{color:#ab9e88;text-underline-offset:3px;text-decoration-color:#ab9e8845}
-    .legal details{margin-top:6px}.legal summary{cursor:pointer;list-style:none;width:fit-content;margin:auto;text-underline-offset:3px;text-decoration:underline;text-decoration-color:#ab9e8845}
+    .split a{text-underline-offset:3px;text-decoration-color:#a2aac660}
+    .legal{margin-top:29px;text-align:center;font-size:9px;line-height:1.8;color:#8d97b4}
+    .legal p{margin:0}.legal .name{color:#adb6cf}.legal-links{display:flex;justify-content:center;flex-wrap:wrap;gap:4px 18px;margin-top:7px}
+    .legal-links a{color:#a6afca;text-underline-offset:3px;text-decoration-color:#a6afca45}
+    .legal details{margin-top:6px}.legal summary{cursor:pointer;list-style:none;width:fit-content;margin:auto;text-underline-offset:3px;text-decoration:underline;text-decoration-color:#a6afca45}
     .legal summary::-webkit-details-marker{display:none}.legal details[open] summary{margin-bottom:6px}.legal .registry{max-width:570px;margin:0 auto}
-    .motion{position:fixed;bottom:14px;right:14px;display:grid;place-items:center;width:33px;height:33px;border:1px solid #bda77d40;border-radius:50%;background:#0d0b08d9;color:var(--gold);z-index:4;cursor:pointer}
+    .motion{position:fixed;bottom:14px;right:14px;display:grid;place-items:center;width:33px;height:33px;border:1px solid #bda77d40;border-radius:50%;background:#060b20e6;color:var(--gold);z-index:4;cursor:pointer}
     .motion svg{width:11px;height:11px;fill:currentColor}.play{display:none}.paused .play{display:block}.paused .pause{display:none}.paused .sigil,.paused .glow{animation-play-state:paused}
     a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
     @keyframes drift{from{transform:translate3d(0,0,0) rotate(-5deg)}to{transform:translate3d(9px,-22px,0) rotate(6deg)}}
@@ -103,7 +103,7 @@
     <footer class="legal">
       <p class="name">ИП Погудина Ксения Андреевна</p>
       <p>ИНН 434567891814 · ОГРНИП 324430000030176</p>
-      <div class="legal-links"><a href="https://pogudinaksenia.ru/offer" target="_blank" rel="noopener noreferrer">Договор оферты</a><a href="https://couturiersoul.ru/policy" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a><a href="mailto:kisucha1995@mail.ru">kisucha1995@mail.ru</a></div>
+      <div class="legal-links"><a href="https://pogudinaksenia.ru/offer" target="_blank" rel="noopener noreferrer">Договор оферты</a><a href="https://couturiersoul.ru/policy" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a></div>
       <details><summary>Сведения о регистрации</summary><p class="registry">ОГРНИП 324430000030176 от 13.06.2024.<br>Регистрирующий орган - Управление Федеральной налоговой службы по Кировской области.<br>Адрес регистрации по оферте - 610000, Кировская область, г. Киров.</p></details>
     </footer>
   </main>
