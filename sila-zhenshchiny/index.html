@@ -80,11 +80,6 @@
     .note h2{max-width:18ch}
     .note .lead{color:#e1ecee}
     .note a{color:#f5dfc4}
-    .reviews{background:radial-gradient(ellipse at 20% 0%,#163545 0%,transparent 60%),var(--night)}
-    .review-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.7rem}
-    .review{display:grid;gap:.65rem;align-content:start;border:1px solid var(--line);border-radius:.5rem;padding:.9rem 1rem;background:#10263590}
-    .review blockquote,.review-copy{overflow-wrap:anywhere;hyphens:auto;font:400 clamp(1.16rem,1.7vw,1.35rem)/1.24 var(--title)}
-    .review figcaption{color:var(--soft);font-size:.72rem;line-height:1.4}
     .booking{background:radial-gradient(ellipse at 90% 100%,#214658 0%,transparent 66%),var(--deep)}
     .booking-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(2rem,6.6vw,6rem);align-items:start}
     .booking .section-head{margin-bottom:1.5rem}
@@ -104,7 +99,7 @@
     .legal summary{cursor:pointer;width:max-content;max-width:100%}
     .legal details p{margin-top:.55rem}
     @media(min-width:901px){.masthead::before{background-position:65% 41%}}
-    @media(max-width:900px){.review-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.hero h1{font-size:clamp(4.75rem,10vw,7.3rem)}.topic{padding-inline:1rem}.topic-art{margin-inline:-1rem}}
+    @media(max-width:900px){.hero h1{font-size:clamp(4.75rem,10vw,7.3rem)}.topic{padding-inline:1rem}.topic-art{margin-inline:-1rem}}
     @media(max-width:690px){
       .wrap,.narrow{width:calc(100% - 2.2rem)}
       .nav{gap:0}.nav a:not(.button){display:none}
@@ -120,8 +115,6 @@
       .section{padding-block:3.45rem}
       .audience-grid,.booking-grid{grid-template-columns:1fr;gap:1.65rem}
       .topic-grid{grid-template-columns:1fr}
-      .review-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem}
-      .review{padding:.75rem}
       .topic{border-radius:.45rem;padding:0;grid-template-columns:5.75rem 1fr;grid-template-rows:auto 1fr;gap:.45rem .9rem;align-items:start}
       .topic-art{grid-row:1/3;margin:0;min-height:100%;align-self:stretch}
       .topic-art svg{width:3.2rem;height:3.2rem}
@@ -142,7 +135,7 @@
     <div class="top wrap">
       <div class="brand"><strong>Кутюрье Души</strong><span>Академия тонкого плана</span></div>
       <nav class="nav" aria-label="Навигация по странице">
-        <a href="#program">Программа</a><a href="#reviews">Отзывы</a>
+        <a href="#program">Программа</a>
         <a href="#booking" class="button ghost">Участие <span class="arrow" aria-hidden="true">↘</span></a>
       </nav>
     </div>
@@ -212,58 +205,6 @@
         <h2 id="note-title">Когда меняется внутренняя опора</h2>
         <p class="lead">Перепрошивка ментального тела начинается с того, что ты замечаешь, через какие роли и настройки привыкла воспринимать себя. Когда эти настройки становятся видимыми, появляется свобода иначе распоряжаться своей силой.</p>
         <p class="lead">Курс можно сочетать с практикумом <a href="https://couturiersoul.ru/mother" target="_blank" rel="noopener noreferrer">«Великая Мать»</a> и другими метафизическими практиками, чтобы знания встраивались в систему через собственный опыт.</p>
-      </div>
-    </section>
-
-    <section class="section reviews" id="reviews" aria-labelledby="reviews-title">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="eyebrow">Обратная связь</p>
-          <h2 id="reviews-title">Отзывы учениц Академии</h2>
-          <p class="lead">Короткие отклики о разных программах и практиках Академии.</p>
-        </div>
-        <div class="review-grid">
-          <figure class="review">
-            <p class="review-copy">После сопровождения участница увидела в теургии способ учиться и по-другому взглянула на деньги.</p>
-            <figcaption>По отзыву об обучении теургии</figcaption>
-          </figure>
-          <figure class="review">
-            <blockquote>«Я такая спокойная, большая и сильная, я даже не представляла!»</blockquote>
-            <figcaption>Практика «Гея»</figcaption>
-          </figure>
-          <figure class="review">
-            <blockquote cite="https://couturiersoul.ru/silaroda#rec787612800">«Потом разглядела своего прадедушку, такую опору рядом с ним ощущала.»</blockquote>
-            <figcaption>Практикум «Сила рода»</figcaption>
-          </figure>
-          <figure class="review">
-            <p class="review-copy">После разбора многое прояснилось в отношении своего пути.</p>
-            <figcaption>По отзыву о «Портрете души»</figcaption>
-          </figure>
-          <figure class="review">
-            <blockquote cite="https://couturiersoul.ru/vetka#rec1024583336">«погружение было очень сильное.»</blockquote>
-            <figcaption>Об энергопрактике</figcaption>
-          </figure>
-          <figure class="review">
-            <blockquote>«Укрепление опоры делаю давно, ещё с начала моего обучения у тебя.»</blockquote>
-            <figcaption>Практика укрепления опоры</figcaption>
-          </figure>
-          <figure class="review">
-            <blockquote cite="https://couturiersoul.ru/silaroda#rec787612800">«Это незабываемо, я еще хочу»</blockquote>
-            <figcaption>Практикум «Сила рода»</figcaption>
-          </figure>
-          <figure class="review">
-            <blockquote cite="https://couturiersoul.ru/lilith#rec963990616">«Я впервые на практике в Академии. Чувствовала всех участников и своих наставников, мать Гайю.»</blockquote>
-            <figcaption>О первой групповой практике</figcaption>
-          </figure>
-          <figure class="review">
-            <blockquote cite="https://couturiersoul.ru/vetka#rec1024583336">«очень спокойно-нежное, наполненно-умиротворенное состояние!!!»</blockquote>
-            <figcaption>Об энергопрактике</figcaption>
-          </figure>
-          <figure class="review">
-            <blockquote cite="https://couturiersoul.ru/silaroda#rec787612800">«Теперь поток света проходит через весь мой род чистой энергией»</blockquote>
-            <figcaption>Практикум «Сила рода»</figcaption>
-          </figure>
-        </div>
       </div>
     </section>
 
