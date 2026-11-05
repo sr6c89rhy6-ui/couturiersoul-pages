@@ -3,28 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080b23">
-  <meta name="description" content="Ближайшие события Академии тонкого плана «Кутюрье Души». Напитка Муладхары в записи, практикум «Великая Мать», активация многомерных крыльев и курс «Сила женщины».">
+  <meta name="theme-color" content="#101b30">
+  <meta name="description" content="Ближайшие события Академии тонкого плана «Кутюрье Души» в ноябре 2026: Коды китов 11 ноября, старт курса Сила женщины 15 ноября и Звёздный дракон 18 ноября.">
   <title>Ближайшие события | Кутюрье Души</title>
+  <link rel="preload" href="kody-kitov/assets/Forum-Regular.ttf" as="font" type="font/ttf" crossorigin>
   <style>
-    :root{color-scheme:dark;--ink:#f2eff8;--soft:#c8c7e3;--quiet:#aaacca;--gold:#e4d1ac;--purple:#a8a7ee;--bg:#080b23}
+    @font-face{font-family:Forum;src:url(kody-kitov/assets/Forum-Regular.ttf) format("truetype");font-weight:400;font-style:normal;font-display:swap}
+    :root{color-scheme:dark;--ink:#f4ede3;--soft:#d5d9e3;--quiet:#b8c0ce;--gold:#e7d2b3;--bg:#101b30;--forum:Forum,Georgia,serif}
     *{box-sizing:border-box}
     html{background:var(--bg);scroll-behavior:smooth}
-    body{margin:0;min-width:320px;isolation:isolate;color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased;background:radial-gradient(ellipse at 45% 0%,#252650 0,transparent 60%),radial-gradient(ellipse at 0% 70%,#171b48 0,transparent 50%),radial-gradient(ellipse at 100% 80%,#222053 0,transparent 50%),#080b23}
+    body{margin:0;min-width:320px;isolation:isolate;color:var(--ink);font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased;background:radial-gradient(ellipse at 48% 0%,#354052 0,transparent 56%),radial-gradient(ellipse at 0% 70%,#21304b 0,transparent 53%),radial-gradient(ellipse at 100% 88%,#3b3443 0,transparent 48%),var(--bg)}
     button,a{-webkit-tap-highlight-color:transparent}
     a{color:inherit}button{font:inherit}
     .cosmos,.dust-veil{position:fixed;inset:0;overflow:hidden;pointer-events:none}
     .cosmos{z-index:-2}.dust-veil{z-index:3}
     #stardust,#fairydust{position:absolute;inset:0;width:100%;height:100%}
-    .haze{position:absolute;width:90vmax;height:80vmax;left:-20%;top:-35%;border-radius:50%;background:radial-gradient(ellipse,rgba(89,90,208,.22),rgba(72,42,154,.1) 35%,transparent 67%);filter:blur(38px);animation:nebula 18s ease-in-out infinite alternate}
-    .haze.second{left:32%;top:10%;width:75vmax;height:75vmax;background:radial-gradient(ellipse,rgba(70,76,187,.17),rgba(107,83,191,.1) 38%,transparent 66%);animation-duration:23s;animation-delay:-11s}
+    .haze{position:absolute;width:90vmax;height:80vmax;left:-20%;top:-35%;border-radius:50%;background:radial-gradient(ellipse,rgba(181,145,110,.14),rgba(84,109,154,.12) 35%,transparent 67%);filter:blur(38px);animation:nebula 18s ease-in-out infinite alternate}
+    .haze.second{left:32%;top:10%;width:75vmax;height:75vmax;background:radial-gradient(ellipse,rgba(99,120,153,.17),rgba(176,139,121,.10) 38%,transparent 66%);animation-duration:23s;animation-delay:-11s}
     .symbol-library{position:absolute;width:0;height:0;overflow:hidden}
     .page{position:relative;z-index:1;max-width:1350px;min-height:100svh;margin:0 auto;padding:30px 65px;display:flex;flex-direction:column;justify-content:center;overflow:clip}
     .masthead{position:relative;text-align:center;margin-bottom:30px}
     .brand-mark{display:block;width:46px;height:58px;margin:0 auto 10px;color:var(--gold);opacity:.8;animation:crown-sway 8s ease-in-out infinite}
     .brand-type{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--soft);margin:0 0 8px}
-    .brand-name{font-size:15px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;margin:0}
-    .heading{margin-top:24px}h1{font-size:clamp(30px,3.35vw,48px);font-weight:350;line-height:1.15;letter-spacing:.055em;text-transform:uppercase;margin:0}
+    .brand-name{font-family:var(--forum);font-size:18px;font-weight:400;letter-spacing:.24em;text-transform:uppercase;margin:0}
+    .heading{margin-top:24px}h1{font-family:var(--forum);font-size:clamp(34px,4.6vw,62px);font-weight:400;line-height:1.03;letter-spacing:.018em;text-transform:uppercase;margin:0}
     .season{font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--quiet);margin:12px 0 0}
     .events-wrap{position:relative;isolation:isolate}
     .sigil-field{position:absolute;inset:0 -48px -25px;z-index:-1;overflow:hidden;pointer-events:none;color:var(--gold)}
@@ -40,15 +42,16 @@
     .glyph-three{width:60px;height:87px;left:14%;bottom:-3%;rotate:-10deg}
     .glyph-four{width:57px;height:86px;right:7%;bottom:-5%;rotate:8deg}
     .ambient-symbol:nth-child(2n) svg{animation-delay:-5s;animation-duration:17s}.ambient-symbol:nth-child(3n) svg{animation-delay:-9s}
-    .events{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
-    .event{position:relative;min-width:0;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:10px;padding:22px;border:1px solid rgba(166,170,239,.28);border-radius:17px;background:linear-gradient(145deg,rgba(41,44,85,.85),rgba(15,19,46,.93));box-shadow:inset 0 1px 0 #d8d7ff10,0 12px 40px #02041535;backdrop-filter:blur(6px);transition:border-color .35s,box-shadow .35s,translate .35s;animation:arrive .9s both}
+    .events{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+    .event{position:relative;min-width:0;display:grid;grid-template-columns:minmax(0,1fr) auto;column-gap:10px;padding:22px;border:1px solid #dac6a83a;border-radius:14px;background:linear-gradient(145deg,#2e374add,#17253bf0);box-shadow:inset 0 1px 0 #f0ddc217,0 12px 40px #02041535;backdrop-filter:blur(6px);transition:border-color .35s,box-shadow .35s,translate .35s;animation:arrive .9s both}
     .event:nth-child(2){animation-delay:.12s}.event:nth-child(3){animation-delay:.24s}.event:nth-child(4){animation-delay:.36s}
-    .event:hover,.event:focus-within{border-color:#c6bcf277;box-shadow:inset 0 1px 0 #d8d7ff18,0 18px 70px #6264d729;translate:0 -3px}
+    .event:hover,.event:focus-within{border-color:#e8d4b677;box-shadow:inset 0 1px 0 #f0ddc218,0 18px 55px #0509104d;translate:0 -3px}
     .date{grid-column:1/-1;display:flex;align-items:center;gap:9px;color:var(--gold);font-size:12px;font-weight:500;letter-spacing:.04em;margin:0 0 13px;min-height:18px}
     .date .dot{width:3px;height:3px;background:var(--gold);border-radius:50%;opacity:.75}
-    .event-type{grid-column:1/-1;font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:var(--quiet);margin:0 0 6px}
-    h2{grid-column:1/-1;font-size:25px;line-height:1.18;letter-spacing:.015em;font-weight:450;text-transform:uppercase;margin:0 0 9px}
-    .description-toggle{grid-column:1;grid-row:4;display:inline-flex;align-items:center;justify-content:flex-start;gap:6px;width:fit-content;max-width:100%;min-height:44px;padding:4px 0;border:0;background:transparent;color:#e0dcf5;cursor:pointer;text-align:left;font-size:17px;line-height:1.3;letter-spacing:0;white-space:nowrap}
+    .event-type{grid-column:1/-1;min-height:2.6em;line-height:1.35;font-size:9px;letter-spacing:.17em;text-transform:uppercase;color:var(--quiet);margin:0 0 6px}
+    h2{grid-column:1/-1;font-family:var(--forum);font-size:30px;line-height:1.08;letter-spacing:0;font-weight:400;text-transform:uppercase;margin:0 0 12px}
+    .event-subtitle{display:block;min-height:1.25em;margin:7px 0 1px;color:#dfcdb5;font:12px/1.45 Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;letter-spacing:0;text-transform:none}
+    .description-toggle{grid-column:1;grid-row:4;display:inline-flex;align-items:center;justify-content:flex-start;gap:6px;width:fit-content;max-width:100%;min-height:44px;padding:4px 0;border:0;background:transparent;color:#e6e1dc;cursor:pointer;text-align:left;font-size:17px;line-height:1.3;letter-spacing:0;white-space:nowrap}
     .description-toggle svg{width:23px;height:23px;flex:none;stroke:var(--gold);stroke-width:1.7;transition:transform .4s}.description-toggle:hover{color:var(--ink)}
     .description-toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
     .description-panel{grid-column:1/-1;grid-row:5;display:grid;grid-template-rows:0fr;opacity:0;transition:grid-template-rows .5s cubic-bezier(.2,.7,.2,1),opacity .35s}
@@ -57,21 +60,21 @@
     .layers{list-style:none;margin:15px 0 16px;padding:0;display:grid;gap:11px}.layers li{display:grid;grid-template-columns:18px 1fr;gap:7px}.layer-number{font-size:10px;color:var(--gold);padding-top:3px;letter-spacing:.03em}.layers strong{font-weight:500;color:var(--ink)}
     .note{color:var(--quiet);font-size:12px;line-height:1.65}.bonus{margin-top:16px!important;color:var(--soft);font-size:12px}.bonus-label{display:block;color:var(--gold);font-size:9px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:5px}
     .action{grid-column:2;grid-row:4;display:flex;align-items:center;justify-content:flex-end}
-    .details{display:inline-flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;color:var(--ink);border:1px solid #d6c9e150;border-radius:7px;padding:7px 10px;font-size:12px;letter-spacing:0;transition:background .25s,border-color .25s,box-shadow .25s;min-height:40px;white-space:nowrap}
-    .details svg{width:13px;height:13px;transition:transform .25s}.details:hover{background:#aaa7f019;border-color:var(--gold);box-shadow:0 0 22px #aaa7f01c}.details:hover svg{transform:translate(2px,-2px)}
+    .details{display:inline-flex;align-items:center;justify-content:center;gap:6px;text-decoration:none;color:#1b293e;background:#e7d6bd;border:1px solid #e7d6bd;border-radius:5px;padding:7px 11px;font-size:12px;letter-spacing:0;transition:background .25s,border-color .25s,box-shadow .25s;min-height:40px;white-space:nowrap}
+    .details svg{width:13px;height:13px;transition:transform .25s}.details:hover{background:#f5e8d5;border-color:#f5e8d5;box-shadow:0 0 22px #e7d6bd2a}.details:hover svg{transform:translate(2px,-2px)}
     a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:5px}
     .payment{display:flex;align-items:center;justify-content:center;gap:12px 22px;margin-top:27px;text-align:left}.payment-icon{flex-shrink:0;width:22px;height:22px;fill:none;stroke:var(--gold);stroke-width:1}
-    .payment p{font-size:14px;line-height:1.65;color:#c4c4df;margin:0}.payment p span{display:block}.admin-link{color:var(--gold);text-underline-offset:4px;text-decoration-color:#dac5a766;white-space:nowrap;font-size:13px;padding:10px 0}.admin-link:hover{text-decoration-color:var(--gold)}
-    .motion-toggle{position:fixed;right:17px;bottom:17px;width:36px;height:36px;border:1px solid #c7c1ef55;border-radius:50%;background:#151a3acc;color:var(--gold);display:grid;place-items:center;cursor:pointer;z-index:5;backdrop-filter:blur(8px)}.motion-toggle:hover{background:#303560}.motion-toggle svg{width:11px;height:11px;fill:currentColor}.play-icon{display:none}.is-paused .pause-icon{display:none}.is-paused .play-icon{display:block}
+    .payment p{font-size:14px;line-height:1.65;color:var(--soft);margin:0}.payment p span{display:block}.admin-link{color:var(--gold);text-underline-offset:4px;text-decoration-color:#dac5a766;white-space:nowrap;font-size:13px;padding:10px 0}.admin-link:hover{text-decoration-color:var(--gold)}
+    .motion-toggle{position:fixed;right:17px;bottom:17px;width:36px;height:36px;border:1px solid #c7c1ef55;border-radius:50%;background:#18263dcc;color:var(--gold);display:grid;place-items:center;cursor:pointer;z-index:5;backdrop-filter:blur(8px)}.motion-toggle:hover{background:#344359}.motion-toggle svg{width:11px;height:11px;fill:currentColor}.play-icon{display:none}.is-paused .pause-icon{display:none}.is-paused .play-icon{display:block}
     .is-paused *,.is-paused *::before,.is-paused *::after{animation-play-state:paused!important}
     @keyframes sigil-drift{0%,100%{transform:translateY(0) rotate(-2deg)}50%{transform:translateY(-9px) rotate(2deg)}}
     @keyframes crown-sway{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
     @keyframes nebula{0%{transform:translate(-3%,3%) rotate(-12deg) scale(.9);opacity:.6}100%{transform:translate(14%,-6%) rotate(12deg) scale(1.15);opacity:1}}
     @keyframes arrive{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
     @media(min-width:1500px){.page{max-width:1440px;padding:36px 82px}.event{padding:24px}.text{font-size:14px}.note,.bonus{font-size:13px}}
-    @media(max-width:1250px) and (min-width:901px){.page{padding:30px 35px}.events{gap:14px}.event{padding:19px}h2{font-size:24px}.date{font-size:11px}.description-toggle{grid-column:1/-1}.action{grid-column:1/-1;grid-row:5;justify-content:flex-start;margin-top:4px}.description-panel{grid-row:6}.payment{gap:12px}.payment p{font-size:13px}.admin-link{font-size:12px}}
-    @media(max-width:900px){.page{padding:23px 18px 36px;max-width:550px;justify-content:flex-start}.masthead{margin-bottom:22px}.brand-mark{width:40px;height:50px;margin-bottom:8px}.brand-type{font-size:9px;letter-spacing:.2em;margin-bottom:7px}.brand-name{font-size:13px;letter-spacing:.2em}.heading{margin-top:22px}h1{font-size:30px;letter-spacing:.025em;max-width:420px;margin:auto}.season{margin-top:10px;font-size:9px}.events{grid-template-columns:1fr;gap:12px}.event{padding:17px 18px;border-radius:15px;column-gap:8px}.date{margin-bottom:11px;font-size:12px}.event-type{font-size:9px;margin-bottom:5px}h2{font-size:25px;margin-bottom:7px}.text{font-size:14px;line-height:1.7}.note,.bonus{font-size:13px}.description-toggle{font-size:17px}.details{font-size:12px;padding:7px 9px;min-height:40px}.payment{flex-wrap:wrap;column-gap:12px;row-gap:0;margin:23px 5px 0;justify-content:flex-start;align-items:flex-start}.payment-icon{width:20px;height:20px;margin-top:4px}.payment p{font-size:14px;flex:1}.admin-link{margin-left:32px;font-size:13px}.motion-toggle{right:10px;bottom:10px;width:34px;height:34px}.sigil-field{inset:0 -18px -20px}.ambient-wings{left:-60px;top:2%;width:200px;height:160px}.ambient-ankh{right:-34px;top:26%;width:110px;height:170px}.ambient-moon{left:-28px;right:auto;top:56%;bottom:auto;width:100px;height:123px}.ambient-book{left:auto;right:-42px;bottom:2%;width:182px;height:156px}.glyph-one{left:44%;top:20%;width:54px;height:80px}.glyph-two{right:auto;left:8%;top:41%;width:65px;height:90px}.glyph-three{left:auto;right:10%;bottom:31%;width:55px;height:80px}.glyph-four{right:auto;left:33%;bottom:4%;width:48px;height:75px}}
-    @media(max-width:380px){.page{padding-left:16px;padding-right:16px}.event{padding:15px 16px}h1{font-size:27px}h2{font-size:24px}.brand-type{font-size:8px}.brand-name{font-size:12px}.date{font-size:11px}.description-toggle{grid-column:1/-1}.action{grid-column:1/-1;grid-row:5;justify-content:flex-start;margin-top:3px}.description-panel{grid-row:6}}
+    @media(max-width:1130px) and (min-width:901px){.page{padding:30px 35px}.events{gap:14px}.event{padding:19px}h2{font-size:26px}.date{font-size:11px}.description-toggle{grid-column:1/-1}.action{grid-column:1/-1;grid-row:5;justify-content:flex-start;margin-top:4px}.description-panel{grid-row:6}.payment{gap:12px}.payment p{font-size:13px}.admin-link{font-size:12px}}
+    @media(max-width:900px){.page{padding:23px 18px 36px;max-width:550px;justify-content:flex-start}.masthead{margin-bottom:22px}.brand-mark{width:40px;height:50px;margin-bottom:8px}.brand-type{font-size:9px;letter-spacing:.2em;margin-bottom:7px}.brand-name{font-size:13px;letter-spacing:.2em}.heading{margin-top:22px}h1{font-size:38px;letter-spacing:.015em;max-width:420px;margin:auto}.season{margin-top:10px;font-size:9px}.events{grid-template-columns:1fr;gap:12px}.event{padding:17px 18px;border-radius:15px;column-gap:8px}.date{margin-bottom:11px;font-size:12px}.event-type{min-height:0;font-size:9px;margin-bottom:5px}h2{font-size:28px;margin-bottom:7px}.text{font-size:14px;line-height:1.7}.note,.bonus{font-size:13px}.description-toggle{font-size:17px}.details{font-size:12px;padding:7px 9px;min-height:40px}.payment{flex-wrap:wrap;column-gap:12px;row-gap:0;margin:23px 5px 0;justify-content:flex-start;align-items:flex-start}.payment-icon{width:20px;height:20px;margin-top:4px}.payment p{font-size:14px;flex:1}.admin-link{margin-left:32px;font-size:13px}.motion-toggle{right:10px;bottom:10px;width:34px;height:34px}.sigil-field{inset:0 -18px -20px}.ambient-wings{left:-60px;top:2%;width:200px;height:160px}.ambient-ankh{right:-34px;top:26%;width:110px;height:170px}.ambient-moon{left:-28px;right:auto;top:56%;bottom:auto;width:100px;height:123px}.ambient-book{left:auto;right:-42px;bottom:2%;width:182px;height:156px}.glyph-one{left:44%;top:20%;width:54px;height:80px}.glyph-two{right:auto;left:8%;top:41%;width:65px;height:90px}.glyph-three{left:auto;right:10%;bottom:31%;width:55px;height:80px}.glyph-four{right:auto;left:33%;bottom:4%;width:48px;height:75px}}
+    @media(max-width:380px){.page{padding-left:16px;padding-right:16px}.event{padding:15px 16px}h1{font-size:34px}h2{font-size:26px}.brand-type{font-size:8px}.brand-name{font-size:12px}.date{font-size:11px}.description-toggle{grid-column:1/-1}.action{grid-column:1/-1;grid-row:5;justify-content:flex-start;margin-top:3px}.description-panel{grid-row:6}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.event,.details,.details svg,.description-panel,.description-toggle svg,.ambient-symbol{transition:none}.event,.brand-mark,.ambient-symbol svg,.haze{animation:none}}
   </style>
 </head>
@@ -131,7 +134,7 @@
       <p class="brand-name">Кутюрье Души</p>
       <div class="heading">
         <h1>Ближайшие события</h1>
-        <p class="season">Октябрь / ноябрь 2026</p>
+        <p class="season">Ноябрь 2026</p>
       </div>
     </header>
     <div class="events-wrap">
@@ -147,60 +150,36 @@
       </div>
     <div class="events" aria-label="Афиша Академии">
       <article class="event">
-        <p class="date"><span>В записи</span></p>
-        <p class="event-type">Аудиопрактика</p>
-        <h2>Напитка<br>Муладхары</h2>
-        <button class="description-toggle" type="button" aria-expanded="false" aria-controls="description-1"><span>Открыть описание</span><svg viewBox="0 0 20 20" fill="none" stroke-width="1.3" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg></button>
+        <p class="date"><time datetime="2026-11-11T20:00:00+03:00">11 ноября</time><span class="dot" aria-hidden="true"></span><span>20:00 МСК</span></p>
+        <p class="event-type">Ченнелинг-практика</p>
+        <h2>Коды китов<span class="event-subtitle">Передача кодов сознания китов</span></h2>
+        <button class="description-toggle" type="button" aria-expanded="false" aria-controls="description-1"><span>Открыть описание</span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg></button>
         <div class="description-panel" id="description-1" aria-hidden="true" inert><div class="description-inner"><div class="text">
-          <p>Коррекция, усиление и напитка первого основного центра для запуска дальнейшей работы всей системы.</p>
-          <p>Первый центр - главный фундамент для проживания жизни в целостности и развития в любой магической работе.</p>
-          <p class="note">Аудиопрактика с нужными частотами.</p>
-        </div>
-        </div></div>
-        <div class="action"><a class="details" href="https://t.me/couturiersoull/6705" target="_blank" rel="noopener noreferrer" aria-label="Подробнее о практике «Напитка Муладхары»">Подробнее<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a></div>
+          <p>Погружение с проводником на уровень вибраций китов, передача необходимых вашей системе кодов и усиление связи с их сознанием.</p>
+          <p class="note">Онлайн или в записи. Доступ 30 дней.</p>
+        </div></div></div>
+        <div class="action"><a class="details" href="kody-kitov/" aria-label="Подробнее: Коды китов">Подробнее<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a></div>
       </article>
       <article class="event">
-        <p class="date"><span>Старт <time datetime="2026-10-26">26 октября</time></span></p>
-        <p class="event-type">Практикум</p>
-        <h2>Великая<br>Мать</h2>
-        <button class="description-toggle" type="button" aria-expanded="false" aria-controls="description-2"><span>Открыть описание</span><svg viewBox="0 0 20 20" fill="none" stroke-width="1.3" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg></button>
-        <div class="description-panel" id="description-2" aria-hidden="true" inert><div class="description-inner"><div class="text">
-          <p>Поэтапное погружение в сознание Земли через три слоя.</p>
-          <ol class="layers">
-            <li><span class="layer-number" aria-hidden="true">01</span><span><strong>Ядро</strong> - сила и опора.</span></li>
-            <li><span class="layer-number" aria-hidden="true">02</span><span><strong>Земная реинкарнационная память</strong> - информация и проводимость информации и энергии.</span></li>
-            <li><span class="layer-number" aria-hidden="true">03</span><span><strong>Материализация</strong> - воплощение идей в форму.</span></li>
-          </ol>
-          <p>Раскрытие в себе кодов Земли через энергопроцессы, знакомство и ченнелинг-передачу необходимых кодов через проводника.</p>
-          <p class="bonus"><span class="bonus-label">Бонус</span>Практика усиления опоры и практика усиления связи с Землёй.</p>
-        </div>
-        </div></div>
-        <div class="action"><a class="details" href="https://couturiersoul.ru/mother" target="_blank" rel="noopener noreferrer" aria-label="Подробнее о практикуме «Великая Мать»">Подробнее<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a></div>
-      </article>
-      <article class="event">
-        <p class="date"><time datetime="2026-10-31">31 октября</time></p>
-        <p class="event-type">Аудиопрактика</p>
-        <h2>Активация<br>крыльев</h2>
-        <button class="description-toggle" type="button" aria-expanded="false" aria-controls="description-4"><span>Открыть описание</span><svg viewBox="0 0 20 20" fill="none" stroke-width="1.3" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg></button>
-        <div class="description-panel" id="description-4" aria-hidden="true" inert><div class="description-inner"><div class="text">
-          <p>Практика активации многомерных крыльев.</p>
-          <p>Какие конкретно крылья активируются и усилят свой потенциал - это индивидуальный вопрос.</p>
-        </div>
-        </div></div>
-        <div class="action"><a class="details" href="https://t.me/couturiersoull/6784" target="_blank" rel="noopener noreferrer" aria-label="Подробнее об аудиопрактике «Активация крыльев»">Подробнее<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a></div>
-      </article>
-      <article class="event">
-        <p class="date"><span>Старт в ноябре</span></p>
+        <p class="date"><time datetime="2026-11-15">15 ноября</time><span class="dot" aria-hidden="true"></span><span>Старт курса</span></p>
         <p class="event-type">Теоретический курс</p>
-        <h2>Сила<br>женщины</h2>
-        <button class="description-toggle" type="button" aria-expanded="false" aria-controls="description-3"><span>Открыть описание</span><svg viewBox="0 0 20 20" fill="none" stroke-width="1.3" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg></button>
+        <h2>Сила женщины<span class="event-subtitle">Женская сила и устройство системы</span></h2>
+        <button class="description-toggle" type="button" aria-expanded="false" aria-controls="description-2"><span>Открыть описание</span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg></button>
+        <div class="description-panel" id="description-2" aria-hidden="true" inert><div class="description-inner"><div class="text">
+          <p>Исследование женской силы, устройства женской системы и её связи с миром. Деньги, партнёрство, реализация и свобода выстраивать свою жизнь из внутренней опоры.</p>
+        </div></div></div>
+        <div class="action"><a class="details" href="sila-zhenshchiny/" aria-label="Подробнее: Сила женщины">Подробнее<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a></div>
+      </article>
+      <article class="event">
+        <p class="date"><time datetime="2026-11-18">18 ноября</time></p>
+        <p class="event-type">Энергопрактика + ченнелинг-передача</p>
+        <h2>Звёздный дракон<span class="event-subtitle">Активация эфирного огня</span></h2>
+        <button class="description-toggle" type="button" aria-expanded="false" aria-controls="description-3"><span>Открыть описание</span><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 7 5 5 5-5"/></svg></button>
         <div class="description-panel" id="description-3" aria-hidden="true" inert><div class="description-inner"><div class="text">
-          <p>Женская сила и право творить собственную жизнь. Выход из навязанных ролей в свободу быть собой, выбирать и созидать.</p>
-          <p>Деньги, реализация женщины в современном мире, раскрытие собственной ценности и уверенности через духовные и оккультно-философские аспекты.</p>
-          <p>Раскрытие новых граней своей силы, собственных желаний и способности воплощать их в жизнь. Свобода выстраивать свою жизнь из внутренней опоры.</p>
-        </div>
-        </div></div>
-        <div class="action"><a class="details" href="https://t.me/couturiersoull/s/1797" target="_blank" rel="noopener noreferrer" aria-label="Подробнее о курсе «Сила женщины»">Подробнее<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a></div>
+          <p>Погружение в свою эфирную систему и индивидуальная передача кодов пробуждения эфирного огня, драконьей силы и огненной проводимости.</p>
+          <p class="note">Аудиопрактика с частотами. Доступ 30 дней.</p>
+        </div></div></div>
+        <div class="action"><a class="details" href="zvezdny-drakon/" aria-label="Подробнее: Звёздный дракон">Подробнее<svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M5 15 15 5M5 5h10v10"/></svg></a></div>
       </article>
     </div>
     <footer class="payment">
@@ -265,7 +244,7 @@
             star.phase += delta*star.twinkle;
             if(star.y < -5){star.y=height+4;star.x=random()*width;}
             const alpha = star.alpha*(.62+Math.sin(star.phase)*.38);
-            ctx.fillStyle=star.gold ? `rgba(235,214,173,${alpha})` : `rgba(209,215,255,${alpha})`;
+            ctx.fillStyle=star.gold ? `rgba(235,214,173,${alpha})` : `rgba(216,226,240,${alpha})`;
             ctx.beginPath();ctx.arc(star.x,star.y,star.r,0,Math.PI*2);ctx.fill();
             if(star.r>1.25) {
               ctx.strokeStyle=`rgba(222,223,255,${alpha*.45})`;ctx.lineWidth=.7;
