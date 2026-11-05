@@ -15,7 +15,6 @@
     body{margin:0;min-width:320px;color:var(--ink);font-family:var(--sans);font-size:15px;-webkit-font-smoothing:antialiased;background:#eae2d5}
     .hero{min-height:100svh;max-width:1760px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);grid-template-rows:auto 1fr;position:relative;background:radial-gradient(ellipse at 12% 3%,#faf5eb 0,transparent 57%),linear-gradient(155deg,#eee6d9,#f3ede4 55%,#eae2d3)}
     .brand{grid-column:1;grid-row:1;display:flex;align-items:center;gap:13px;padding:34px clamp(32px,6.3vw,115px) 15px;color:#343647}
-    .brand svg{width:27px;height:37px;flex:0 0 auto;color:var(--gold)}
     .brand-name{font-family:var(--serif);font-size:19px;line-height:1.03;letter-spacing:.07em;text-transform:uppercase}
     .brand small{display:block;font-size:8px;line-height:1.3;letter-spacing:.15em;text-transform:uppercase;margin-top:6px;color:#5d584f}
     .copy{grid-column:1;grid-row:2;align-self:center;max-width:830px;padding:38px clamp(32px,6.3vw,115px) 62px}
@@ -41,7 +40,7 @@
     @media(max-width:680px){
       .hero{display:flex;flex-direction:column;min-height:100svh}
       .brand{padding:20px 25px 18px;gap:10px}
-      .brand svg{width:23px;height:30px}.brand-name{font-size:16px}.brand small{font-size:7px;margin-top:5px}
+      .brand-name{font-size:16px}.brand small{font-size:7px;margin-top:5px}
       .art{order:1;height:clamp(340px,112vw,610px);min-height:0}
       .art img{object-position:50% 54%}
       .copy{order:2;align-self:stretch;padding:30px 25px 35px}
@@ -59,7 +58,6 @@
 <body>
   <main class="hero" aria-labelledby="title">
     <header class="brand">
-      <svg viewBox="0 0 36 48" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><circle cx="18" cy="23" r="10"/><path d="M18 3v40M8 23h20M5 14c-4 12 2 23 13 25 11-2 17-13 13-25M14 7q4 6 8 0"/><circle cx="18" cy="45" r="1.4" fill="currentColor" stroke="none"/></svg>
       <div><div class="brand-name">Кутюрье Души</div><small>Академия тонкого плана</small></div>
     </header>
     <figure class="art">
