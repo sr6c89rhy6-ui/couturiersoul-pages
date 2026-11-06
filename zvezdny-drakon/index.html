@@ -68,9 +68,11 @@
       .code h3{font-size:21px}.code p,.how{font-size:12px}.ending{margin-top:20px;padding:13px 15px}
     }
     @media(prefers-reduced-motion:reduce){.join{transition:none}}
-    .first-practice{max-width:24rem;margin:14px 0 0;color:#51474a;font-size:13px;line-height:1.5}
-    .first-practice a{color:inherit;text-decoration:underline;text-underline-offset:3px}
-    @media(max-width:680px){.first-practice{text-align:center}}
+    .first-practice{box-sizing:border-box;max-width:25rem;margin:14px 0 0;padding:12px 14px;background:#fffaf1a6;border:1px solid #a2897366;border-radius:4px;color:#51474a;font-size:13px;line-height:1.5}
+    .first-practice p{margin:0}
+    .first-practice p+p{margin-top:4px}
+    .first-practice-title{color:#172238;font-weight:650}
+    .first-practice-code{color:#172238;letter-spacing:.045em}
   </style>
 </head>
 <body>
@@ -87,7 +89,11 @@
           <p class="details"><time datetime="2026-11-18">18.11</time><span>Выгрузка в поле</span><span class="dot" aria-hidden="true">✦</span><span>Доступ 30 дней</span></p>
           <p class="format">Аудиопрактика со специальными частотами для погружения и активации.</p>
           <a class="join" href="https://payform.ru/bccX71l/">Присоединиться <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.15" aria-hidden="true"><path d="M3 10h13m-6-6 6 6-6 6"/></svg></a>
-          <p class="first-practice">На первую практику в Академии действует <strong>скидка 50%</strong>. Чтобы получить её, <a href="https://t.me/couturiermanager">напишите администратору</a>.</p>
+          <aside class="first-practice" aria-label="Скидка на первое участие">
+            <p class="first-practice-title">Первое участие в практиках Академии со скидкой <strong>50%</strong></p>
+            <p>Введите промокод <strong class="first-practice-code">FIRST</strong> при оплате по кнопке «Присоединиться».</p>
+            <p>Промокод действует только для тех, кто ещё не участвовал в практиках Академии.</p>
+          </aside>
         </div>
         <figure class="art"><img src="assets/zvezdny-drakon.webp" alt="Звёздный дракон над кристаллом в ладони. Эфирный огонь поднимается от кристалла, освещая космические символы." fetchpriority="high"></figure>
       </section>
