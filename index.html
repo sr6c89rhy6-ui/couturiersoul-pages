@@ -73,19 +73,16 @@
     @media(max-width:360px){.page{width:calc(100% - 32px)}h1{font-size:2.4rem}h2{font-size:2.3rem}.event{grid-template-columns:minmax(0,1fr) 91px}.event-art{width:103px}.date{font-size:1.05rem}.brand{font-size:1.5rem}}
     @media(prefers-reduced-motion:reduce){.details{transition:none}.details:hover{transform:none}}
   
-    .site-legal{box-sizing:border-box;width:100%;max-width:1248px;margin:22px auto 0;padding:12px 24px 24px;text-align:center;color:#59574f;font:400 .875rem/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
-    .site-legal p{margin:0 0 6px;font:inherit}
-    .site-legal .site-legal-name{color:#45443e}
-    .site-legal-numbers{display:flex;justify-content:center;flex-wrap:wrap;gap:3px 16px}
+  
+    .site-legal{box-sizing:border-box;width:100%;max-width:35rem;margin:14px auto 0;padding:6px 16px 18px;text-align:center;color:#59574f;font:400 .75rem/1.45 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}
+    .site-legal p{margin:0 0 4px;font:inherit}
+    .site-legal-numbers{display:flex;justify-content:center;flex-wrap:wrap;gap:2px 12px}
     .site-legal-numbers span{white-space:nowrap}
-    .site-legal-registration summary{display:inline-flex;align-items:center;justify-content:center;min-height:44px;cursor:pointer;list-style:none;text-decoration:underline;text-underline-offset:.24em}
-    .site-legal-registration summary::-webkit-details-marker{display:none}
-    .site-legal-registration summary:focus-visible{outline:2px solid #77632e;outline-offset:4px}
-    .site-legal-registration p{max-width:680px;margin:0 auto 8px!important}
-    .site-legal-links{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0 20px}
-    .site-legal-links a{display:inline-flex;align-items:center;min-height:44px;color:inherit;font:inherit;text-decoration:underline;text-underline-offset:.24em}
-    .site-legal-links a:focus-visible{outline:2px solid #77632e;outline-offset:4px}
-    @media(max-width:560px){.site-legal{padding:10px 8px 16px;margin-top:17px}.site-legal-links{column-gap:18px}.site-legal-address{max-width:350px;margin-inline:auto!important}}
+    .site-legal-links{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0 16px}
+    .site-legal-links a{display:inline-flex;align-items:center;min-height:32px;color:inherit;font:inherit;text-decoration:underline;text-underline-offset:.24em}
+    .site-legal-links a:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+    .site-legal.is-dark{color:#bccbd0}
+    @media(max-width:560px){.site-legal{margin-top:12px;padding-inline:8px}.site-legal-links{column-gap:14px}}
   </style>
 </head>
 <body>
@@ -149,12 +146,8 @@
       <a class="admin" href="https://t.me/couturiermanager" target="_blank" rel="noopener noreferrer">Написать администратору</a>
     </footer>
   <footer class="site-legal" aria-label="Реквизиты и документы">
-    <p class="site-legal-name">ИП Погудина Ксения Андреевна</p>
+    <p>ИП Погудина Ксения Андреевна</p>
     <p class="site-legal-numbers"><span>ИНН 434567891814</span><span>ОГРНИП 324430000030176</span></p>
-    <details class="site-legal-registration">
-      <summary>Сведения о регистрации</summary>
-      <p class="site-legal-address">Адрес регистрации: 610000, Кировская область, г. Киров.<br>Регистрирующий орган - Управление Федеральной налоговой службы по Кировской области.</p>
-    </details>
     <nav class="site-legal-links" aria-label="Правовая информация">
       <a href="https://pogudinaksenia.ru/offer" target="_blank" rel="noopener noreferrer">Договор оферты</a>
       <a href="https://couturiersoul.ru/policy" target="_blank" rel="noopener noreferrer">Политика конфиденциальности</a>
