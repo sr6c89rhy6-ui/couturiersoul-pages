@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#eeece5">
-  <meta name="description" content="Афиша Академии тонкого плана «Кутюрье Души»: Коды китов, курс Сила женщины, ПЛЕЯДЫ - 25 ноября в 10:00 МСК и Звёздный дракон - 28 ноября в 11:00 МСК.">
+  <meta name="description" content="Афиша Академии тонкого плана «Кутюрье Души»: ПЛЕЯДЫ - 25 ноября в 10:00 МСК, Звёздный дракон - 28 ноября в 11:00 МСК. Коды китов в записи до 11 декабря. Курс Сила женщины.">
   <meta property="og:title" content="Ближайшие события | Кутюрье Души">
   <meta property="og:description" content="Практики, ченнелинг и курсы Академии тонкого плана.">
   <meta property="og:type" content="website">
@@ -31,7 +31,8 @@
     .events{display:grid;gap:26px}
     .event{display:grid;grid-template-columns:minmax(0,1fr) minmax(200px,34%);column-gap:36px;align-items:center;position:relative;min-height:260px}
     .event-copy{padding-block:12px}
-    .date{margin:0 0 4px;color:var(--gold);font:400 1.45rem/1.2 var(--forum);letter-spacing:.055em}
+    .date{display:flex;align-items:center;flex-wrap:wrap;gap:5px 12px;margin:0 0 4px;color:var(--gold);font:400 1.45rem/1.2 var(--forum);letter-spacing:.055em}
+    .soon{color:#9e302b;font:600 .875rem/1.3 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;letter-spacing:.04em;text-transform:uppercase}
     h2{font:400 clamp(2.65rem,5.2vw,3.8rem)/1.06 var(--forum);letter-spacing:-.025em;margin:0 0 4px;text-wrap:balance}
     .event-type{font-size:1.05rem;line-height:1.4;font-style:italic;letter-spacing:.015em;margin:0 0 11px;color:#363730}
     .description{max-width:620px;font-size:1rem;line-height:1.5;color:var(--body);margin:0 0 8px;text-wrap:pretty}
@@ -94,13 +95,36 @@
     </header>
     <h1>Ближайшие события</h1>
     <div class="events" id="events" aria-label="Афиша Академии">
+      <article class="event" aria-labelledby="pleyady-title">
+        <div class="event-copy">
+          <p class="date"><span class="soon">Скоро</span><time datetime="2026-11-25T10:00:00+03:00">25.11 · 10:00 МСК</time></p>
+          <h2 id="pleyady-title">ПЛЕЯДЫ</h2>
+          <p class="event-type">Ченнелинг-передача · энергокоррекция</p>
+          <p class="description">Передача необходимых кодов и ресурса для энергетической коррекции системы под запрос Души. Индивидуальная работа через проводника в пространстве Академии.</p>
+          <p class="note">Навыки для участия не требуются.</p>
+          <p class="note">Онлайн или в записи - разницы по эффективности нет. Доступ 30 дней.</p>
+          <a class="details" href="pleyady/" aria-label="Подробнее о практике ПЛЕЯДЫ">Подробнее</a>
+        </div>
+        <div class="event-art pleyady" aria-hidden="true"></div>
+      </article>
+      <article class="event" aria-labelledby="dragon-title">
+        <div class="event-copy">
+          <p class="date"><span class="soon">Скоро</span><time datetime="2026-11-28T11:00:00+03:00">28.11 · 11:00 МСК</time></p>
+          <h2 id="dragon-title">Звёздный дракон</h2>
+          <p class="event-type">Активация эфирного огня</p>
+          <p class="description">Энергопрактика + ченнелинг-передача. Погружение в эфирную систему и индивидуальная передача кодов пробуждения эфирного огня.</p>
+          <p class="note">Аудиопрактика с частотами. Онлайн или в записи - разницы по эффективности нет. Доступ 30 дней.</p>
+          <a class="details" href="zvezdny-drakon/" aria-label="Подробнее о практике Звёздный дракон">Подробнее</a>
+        </div>
+        <div class="event-art dragon" aria-hidden="true"></div>
+      </article>
       <article class="event" aria-labelledby="whales-title">
         <div class="event-copy">
-          <p class="date"><time datetime="2026-11-11T20:00:00+03:00">11.11 · 20:00 МСК</time></p>
+          <p class="date">Практика в записи</p>
           <h2 id="whales-title">Коды китов</h2>
           <p class="event-type">Ченнелинг-практика</p>
           <p class="description">Погружение в сознание китов и передача необходимых вашей системе кодов через проводника. Усиление связи с их сознанием.</p>
-          <p class="note">В записи 30 дней</p>
+          <p class="note">Можно пройти сейчас. Активный доступ до <time datetime="2026-12-11">11 декабря</time> включительно.</p>
           <a class="details" href="kody-kitov/" aria-label="Подробнее о практике Коды китов">Подробнее</a>
         </div>
         <div class="event-art whale" aria-hidden="true"></div>
@@ -115,28 +139,6 @@
           <a class="details" href="sila-zhenshchiny/" aria-label="Подробнее о курсе Сила женщины">Подробнее</a>
         </div>
         <div class="event-art woman" aria-hidden="true"></div>
-      </article>
-      <article class="event" aria-labelledby="pleyady-title">
-        <div class="event-copy">
-          <p class="date"><time datetime="2026-11-25T10:00:00+03:00">25.11 · 10:00 МСК</time></p>
-          <h2 id="pleyady-title">ПЛЕЯДЫ</h2>
-          <p class="event-type">Ченнелинг-передача · энергокоррекция</p>
-          <p class="description">Передача необходимых кодов и ресурса для энергетической коррекции системы под запрос Души. Индивидуальная работа через проводника в пространстве Академии.</p>
-          <p class="note">Навыки для участия не требуются.</p>
-          <a class="details" href="pleyady/" aria-label="Подробнее о практике ПЛЕЯДЫ">Подробнее</a>
-        </div>
-        <div class="event-art pleyady" aria-hidden="true"></div>
-      </article>
-      <article class="event" aria-labelledby="dragon-title">
-        <div class="event-copy">
-          <p class="date"><time datetime="2026-11-28T11:00:00+03:00">28.11 · 11:00 МСК</time></p>
-          <h2 id="dragon-title">Звёздный дракон</h2>
-          <p class="event-type">Активация эфирного огня</p>
-          <p class="description">Энергопрактика + ченнелинг-передача. Погружение в эфирную систему и индивидуальная передача кодов пробуждения эфирного огня.</p>
-          <p class="note">Аудиопрактика с частотами. Доступ 30 дней.</p>
-          <a class="details" href="zvezdny-drakon/" aria-label="Подробнее о практике Звёздный дракон">Подробнее</a>
-        </div>
-        <div class="event-art dragon" aria-hidden="true"></div>
       </article>
     </div>
     <footer class="payment">
