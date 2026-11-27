@@ -38,7 +38,7 @@
     .description{max-width:620px;font-size:1rem;line-height:1.5;color:var(--body);margin:0 0 8px;text-wrap:pretty}
     .note{font-size:1rem;margin:0 0 12px;color:var(--body)}
     .course-status{max-width:620px;margin:0 0 9px;font-size:1rem;line-height:1.5;color:var(--body);text-wrap:pretty}
-    .course-open{margin-bottom:13px}
+    .course-open{margin-bottom:13px;color:#9e302b;font-weight:500}
     .details{display:inline-flex;justify-content:center;align-items:center;min-width:154px;min-height:44px;padding:8px 25px;border-radius:100px;background:var(--button);color:#f5f1e7;font-size:1rem;line-height:1.2;letter-spacing:.025em;text-decoration:none;transition:background-color .2s,transform .2s}
     .details:hover{background:#57513f;transform:translateY(-1px)}
     .event-art{width:100%;aspect-ratio:1;background-image:url("assets/antique-gold-emblems.webp?v=20261120");background-repeat:no-repeat;background-size:300% 100%;pointer-events:none}
@@ -47,6 +47,7 @@
     .dragon{background-position:100% 50%}
     .pleyady{background-image:url("pleyady/assets/pleyady-gold.webp");background-size:contain;background-position:center}
     .isis{background-image:url("teurgiya-izide/assets/ankh-antique-gold.webp?v=20261124");background-size:contain;background-position:center}
+    .energy-protection{background-image:url("energozashchity/assets/shield.webp");background-size:contain;background-position:center}
     .payment{text-align:center;margin-top:39px}
     .offer{font:400 clamp(1.65rem,3.5vw,2.35rem)/1.18 var(--forum);color:var(--gold);margin:0 auto 8px;text-wrap:balance}
     .promocode{font-size:1.4rem;letter-spacing:.01em;margin:0 0 25px}
@@ -98,7 +99,7 @@
     <div class="events" id="events" aria-label="Афиша Академии">
       <article class="event" aria-labelledby="pleyady-title">
         <div class="event-copy">
-          <p class="date"><span class="soon">Скоро</span><time datetime="2026-11-25T10:00:00+03:00">25.11 · 10:00 МСК</time></p>
+          <p class="date"><span class="soon">Запись до 25.11</span><time datetime="2026-11-25T10:00:00+03:00">25.11 · 10:00 МСК</time></p>
           <h2 id="pleyady-title">ПЛЕЯДЫ</h2>
           <p class="event-type">Ченнелинг-передача · энергокоррекция</p>
           <p class="description">Передача необходимых кодов и ресурса для энергетической коррекции системы под запрос Души. Индивидуальная работа через проводника в пространстве Академии.</p>
@@ -130,6 +131,17 @@
         </div>
         <div class="event-art isis" aria-hidden="true"></div>
       </article>
+      <article class="event" aria-labelledby="protection-title">
+        <div class="event-copy">
+          <p class="date"><time datetime="2026-12-15">Старт 15 декабря</time></p>
+          <h2 id="protection-title">Энергозащиты</h2>
+          <p class="event-type">Мини-курс · лекция + практика</p>
+          <p class="description">Энергогигиена и основы магической защиты себя, близких и дома. Логика защит, техники и практика установки защиты на себя.</p>
+          <p class="note">Стоимость 4 000 ₽.</p>
+          <a class="details" href="energozashchity/" aria-label="Подробнее о мини-курсе Энергозащиты">Подробнее</a>
+        </div>
+        <div class="event-art energy-protection" aria-hidden="true"></div>
+      </article>
       <article class="event" aria-labelledby="whales-title">
         <div class="event-copy">
           <p class="date">Практика в записи</p>
@@ -147,7 +159,7 @@
           <h2 id="woman-title">Сила женщины</h2>
           <p class="event-type">Теоретический курс в формате закрытого клуба</p>
           <p class="course-status">Рабочее пространство уже сформировано. Сейчас идёт включение в энергетические и информационные процессы. Лекционные встречи начнутся, когда группа закрепится в рабочем пространстве.</p>
-          <p class="note course-open">Вы ещё успеваете присоединиться.</p>
+          <p class="note course-open">Ещё можно присоединиться.</p>
           <a class="details" href="sila-zhenshchiny/" aria-label="Подробнее о курсе Сила женщины">Подробнее</a>
         </div>
         <div class="event-art woman" aria-hidden="true"></div>
